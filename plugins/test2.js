@@ -10,25 +10,21 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
       return m.reply('*Sin resultados*');
     }
 
-    const randomVideo = searchResults.result[Math.floor(Math.random() * searchResults.result.length)];
-    const interactiveMessage = {
-      text: `*╭┈─────⸌̗⸃》̗̀💥̖́《⸍̖⸂─────┈╮*\n*│≣ 🔥 ʀᴇsᴜʟᴛᴀᴅᴏs ᴏʙᴛᴇɴɪᴅᴏs:*\n*╰┈─────⸌̗⸃》̗̀🔥̖́《⸍̖⸂─────┈╯*`.trim(),
-      footer: { text: `${global.wm}`.trim() },  
-      buttons: searchResults.result.map((video) => ({
-        buttonId: `${usedPrefix}play.1 ${video.url}`,
-        buttonText: { displayText: `MP3 - ${video.title}` },
-        type: 1,
-      }))
-    };
+    const buttons = searchResults.result.map((video, index) => ({
+      buttonId: `${usedPrefix}play.1 ${video.url}`,  // Cambié el id del botón para que sea único por video
+      buttonText: { displayText: `${index + 1}. ${video.title}` },  // Cada botón mostrará el título del video
+      type: 1
+    }));
 
     const buttonMessage = {
-      text: interactiveMessage.text,
-      footer: interactiveMessage.footer.text,
-      buttons: interactiveMessage.buttons,
+      text: `*Resultados obtenidos:* ${searchResults.result.length}\n\nSelecciona una opción para descargar:`,
+      footer: `❤️‍🔥 Megumin Search ❤️‍🔥`,
+      buttons: buttons,  // Aquí se asignan los botones generados
       headerType: 1
     };
 
-    await conn.sendList(m.chat, buttonMessage, { quoted: m });
+    // Enviando el mensaje con botones interactivos
+    await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
 
   } catch (e) {
     console.error(e);
