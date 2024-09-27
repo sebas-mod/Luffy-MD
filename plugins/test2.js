@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
 
     const buttons = searchResults.result.map((video, index) => ({
       buttonId: `${usedPrefix}play.1 ${video.url}`,  // Cambié el id del botón para que sea único por video
-      buttonText: { displayText: `${index + 1}. ${video.title}` },  // Cada botón mostrará el título del video
+      sendList: { displayText: `${index + 1}. ${video.title}` },  // Cada botón mostrará el título del video
       type: 1
     }));
 
