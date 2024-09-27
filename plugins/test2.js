@@ -29,13 +29,7 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
                 rows: [
                   {
                     header: video.title,
-                    title: video.title,
-                    description: 'Descargar MP3',
-                    id: `${usedPrefix}play.1 ${video.url}`
-                  },
-                  {
-                    header: video.title,
-                    title: video.title,
+                    title: ,
                     description: 'Descargar MP4',
                     id: `${usedPrefix}play.2 ${video.url}`
                   }
