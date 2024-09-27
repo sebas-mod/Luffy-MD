@@ -12,10 +12,10 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
 
     const randomVideo = searchResults.result[Math.floor(Math.random() * searchResults.result.length)];
     const interactiveMessage = {
-      body: { text: `*╭┈─────⸌̗⸃》̗̀💥̖́《⸍̖⸂─────┈╮*\n*│≣ 🔥 ʀᴇsᴜʟᴛᴀᴅᴏs ᴏʙᴛᴇɴɪᴅᴏs:* ${searchResults.result.length}\n*│≡ 🎲 Video aleatorio:*\n*│≠ 🌹-› Título:* ${randomVideo.title}\n*│≜ 👤-› Visitas:* ${randomVideo.views}\n*│≚ 💫-› Duración:* ${randomVideo.duration}\n*│≋ 🌱-› Link :* ${randomVideo.url}\n*╰┈─────⸌̗⸃》̗̀🔥̖́《⸍̖⸂─────┈╯*`.trim() },
+      body: { text: `*╭┈─────⸌̗⸃》̗̀💥̖́《⸍̖⸂─────┈╮*\n*│≣ 🔥 ʀᴇsᴜʟᴛᴀᴅᴏs ᴏʙᴛᴇɴɪᴅᴏs:*\n╰┈─────⸌̗⸃》̗̀🔥̖́《⸍̖⸂─────┈╯*`.trim() },
       footer: { text: `${global.wm}`.trim() },  
       header: {
-        title: `*❤️‍🔥 Megumin Search ❤️‍🔥*\n`,
+        title: `*❤️‍🔥 Genesis Search ❤️‍🔥*\n`,
         hasMediaAttachment: false,  // Cambié esto a false ya que no se especificó una imagen
       },
       nativeFlowMessage: {
