@@ -6,36 +6,58 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
 
   try {
     let searchResults = await searchXvideos(args[0]);
+
     if (searchResults.result.length === 0) {
       return m.reply('*Sin resultados*');
     }
 
-const interactiveMessage = {
-      text: `*Resultados obtenidos:* ${searchResults.result.length}\n\nSelecciona una opción para descargar:`.trim(),
-      footer: { text: `${global.wm}`.trim() },  
-      buttons: searchResults.result.map((video) => ({
-        buttonId: `${usedPrefix}play.1 ${video.url}`,
-        buttonText: { displayText: `MP3 - ${video.title}` },
-        type: 1,
-      }))
+    // Creando las secciones de los resultados para los botones
+    const sections = searchResults.result.map((video, index) => ({
+      title: `${index + 1}. ${video.title}`,
+      rows: [
+        {
+          title: `${video.title}`,
+          description: `Duración: ${video.duration} - Visitas: ${video.views}`,
+          rowId: `${usedPrefix}play.1 ${video.url}`
+        }
+      ]
+    }));
+
+    const title = `Resultados de la búsqueda: ${args[0]}`;
+    const buttonText = 'Selecciona un video';
+    const text = `Se encontraron ${searchResults.result.length} resultados.`;
+
+    // Generar el mensaje interactivo con los botones
+    const message = {
+      interactiveMessage: {
+        header: {
+          title: title,
+          hasMediaAttachment: false
+        },
+        body: { text: text },
+        nativeFlowMessage: {
+          buttons: [
+            {
+              name: 'single_select',
+              buttonParamsJson: JSON.stringify({
+                title: buttonText,
+                sections: sections
+              })
+            }
+          ],
+          messageParamsJson: ''
+        }
+      }
     };
 
-    const buttonMessage = {
-      text: interactiveMessage.text,
-      footer: interactiveMessage.footer.text,
-      buttons: interactiveMessage.buttons,
-      headerType: 1
-    };
+    // Generando y enviando el mensaje
+    let msgL = generateWAMessageFromContent(m.chat, {
+      viewOnceMessage: {
+        message
+      }
+    }, { userJid: conn.user.jid, quoted: m });
 
-    await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
-
-  } catch (e) {
-    console.error(e);
-    m.reply('*Ocurrió un error al buscar los resultados.*');
-  }
-};
-    // Enviando el mensaje con botones interactivos
-    await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
+    await conn.relayMessage(m.chat, msgL.message, { messageId: msgL.key.id });
 
   } catch (e) {
     console.error(e);
@@ -52,13 +74,13 @@ async function searchXvideos(search) {
     const html = response.data;
     const $ = cheerio.load(html);
     const result = [];
-    
+
     $('div.thumb-block').each(function() {
       const _title = $(this).find('p.title a').attr('title');
       const _duration = $(this).find('.duration').text().trim();
       const _views = $(this).find('.meta span').first().text().trim();
       const _url = 'https://www.xvideos.com' + $(this).find('p.title a').attr('href');
-      
+
       if (_title && _duration && _url) {
         const hasil = { title: _title, duration: _duration, views: _views, url: _url };
         result.push(hasil);
