@@ -12,45 +12,23 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
 
     const randomVideo = searchResults.result[Math.floor(Math.random() * searchResults.result.length)];
     const interactiveMessage = {
-      body: { text: `*╭┈─────⸌̗⸃》̗̀💥̖́《⸍̖⸂─────┈╮*\n*│≣ 🔥 ʀᴇsᴜʟᴛᴀᴅᴏs ᴏʙᴛᴇɴɪᴅᴏs:*\n╰┈─────⸌̗⸃》̗̀🔥̖́《⸍̖⸂─────┈╯*`.trim() },
+      text: `*╭┈─────⸌̗⸃》̗̀💥̖́《⸍̖⸂─────┈╮*\n*│≣ 🔥 ʀᴇsᴜʟᴛᴀᴅᴏs ᴏʙᴛᴇɴɪᴅᴏs:*\n*╰┈─────⸌̗⸃》̗̀🔥̖́《⸍̖⸂─────┈╯*`.trim(),
       footer: { text: `${global.wm}`.trim() },  
-      header: {
-        title: `*❤️‍🔥 Genesis Search ❤️‍🔥*\n`,
-        hasMediaAttachment: false,  // Cambié esto a false ya que no se especificó una imagen
-      },
-      nativeFlowMessage: {
-        buttons: [
-          {
-            name: 'single_select',
-            buttonParamsJson: JSON.stringify({
-              title: 'OPCIONES DISPONIBLES',
-              sections: searchResults.result.map((video) => ({
-                title: video.title,
-                rows: [
-                  {
-                    header: video.title,
-                    title: ,
-                    description: 'Descargar MP4',
-                    id: `${usedPrefix}play.2 ${video.url}`
-                  }
-                ]
-              }))
-            })
-          }
-        ],
-        messageParamsJson: ''
-      }
+      buttons: searchResults.result.map((video) => ({
+        buttonId: `${usedPrefix}play.1 ${video.url}`,
+        buttonText: { displayText: `MP3 - ${video.title}` },
+        type: 1,
+      }))
     };
 
-    let msg = generateWAMessageFromContent(m.chat, {
-      viewOnceMessage: {
-        message: {
-          interactiveMessage,
-        },
-      },
-    }, { userJid: conn.user.jid, quoted: m });
-    
-    await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
+    const buttonMessage = {
+      text: interactiveMessage.text,
+      footer: interactiveMessage.footer.text,
+      buttons: interactiveMessage.buttons,
+      headerType: 1
+    };
+
+    await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
 
   } catch (e) {
     console.error(e);
