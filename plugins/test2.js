@@ -1,25 +1,63 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, command, usedPrefix }) => {
   if (!args[0]) throw `*Formato incorrecto*\nEjemplo:\n\n${usedPrefix + command} con mi prima`;
-  
+
   try {
-    let searchResults = await searchXvideos(args[0]); // Cambié la función a "searchXvideos"
-    let teks = searchResults.result.map((v, i) => 
-      `🌸 𝐒𝐄𝐀𝐑𝐂𝐇 🌸 
-       𝐓𝐈𝐓𝐔𝐋𝐎: ${v.title}
-       𝐃𝐔𝐑𝐀𝐂𝐈𝐎𝐍: ${v.duration}
-       𝐕𝐈𝐒𝐈𝐓𝐀𝐒: ${v.views}
-       𝐋𝐈𝐍𝐊: ${v.url}
-      ---------------------------------------------------\n`).join('\n\n');
-    
+    let searchResults = await searchXvideos(args[0]);
     if (searchResults.result.length === 0) {
-      teks = '*Sin resultados*';
+      return m.reply('*Sin resultados*');
     }
+
+    const randomVideo = searchResults.result[Math.floor(Math.random() * searchResults.result.length)];
+    const interactiveMessage = {
+      body: { text: `*╭┈─────⸌̗⸃》̗̀💥̖́《⸍̖⸂─────┈╮*\n*│≣ 🔥 ʀᴇsᴜʟᴛᴀᴅᴏs ᴏʙᴛᴇɴɪᴅᴏs:* ${searchResults.result.length}\n*│≡ 🎲 Video aleatorio:*\n*│≠ 🌹-› Título:* ${randomVideo.title}\n*│≜ 👤-› Visitas:* ${randomVideo.views}\n*│≚ 💫-› Duración:* ${randomVideo.duration}\n*│≋ 🌱-› Link :* ${randomVideo.url}\n*╰┈─────⸌̗⸃》̗̀🔥̖́《⸍̖⸂─────┈╯*`.trim() },
+      footer: { text: `${global.wm}`.trim() },  
+      header: {
+        title: `*❤️‍🔥 Megumin Search ❤️‍🔥*\n`,
+        hasMediaAttachment: false,  // Cambié esto a false ya que no se especificó una imagen
+      },
+      nativeFlowMessage: {
+        buttons: [
+          {
+            name: 'single_select',
+            buttonParamsJson: JSON.stringify({
+              title: 'OPCIONES DISPONIBLES',
+              sections: searchResults.result.map((video) => ({
+                title: video.title,
+                rows: [
+                  {
+                    header: video.title,
+                    title: video.title,
+                    description: 'Descargar MP3',
+                    id: `${usedPrefix}play.1 ${video.url}`
+                  },
+                  {
+                    header: video.title,
+                    title: video.title,
+                    description: 'Descargar MP4',
+                    id: `${usedPrefix}play.2 ${video.url}`
+                  }
+                ]
+              }))
+            })
+          }
+        ],
+        messageParamsJson: ''
+      }
+    };
+
+    let msg = generateWAMessageFromContent(m.chat, {
+      viewOnceMessage: {
+        message: {
+          interactiveMessage,
+        },
+      },
+    }, { userJid: conn.user.jid, quoted: m });
     
-    m.reply(teks);
+    await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id });
+
   } catch (e) {
     console.error(e);
     m.reply('*Ocurrió un error al buscar los resultados.*');
@@ -36,14 +74,13 @@ async function searchXvideos(search) {
     const $ = cheerio.load(html);
     const result = [];
     
-    // Cambié los selectores para adaptarlos a la estructura de Xvideos
     $('div.thumb-block').each(function() {
       const _title = $(this).find('p.title a').attr('title');
       const _duration = $(this).find('.duration').text().trim();
       const _views = $(this).find('.meta span').first().text().trim();
       const _url = 'https://www.xvideos.com' + $(this).find('p.title a').attr('href');
       
-      if (_title && _duration && _url) {  // Verificación para evitar valores nulos
+      if (_title && _duration && _url) {
         const hasil = { title: _title, duration: _duration, views: _views, url: _url };
         result.push(hasil);
       }
@@ -51,7 +88,7 @@ async function searchXvideos(search) {
 
     return { result };
   } catch (error) {
-    console.error('Ocurrió un error al buscar en Xvideos:', error);  // Cambié el mensaje de error
+    console.error('Ocurrió un error al buscar en Xvideos:', error);
     return { result: [] };
   }
 }
