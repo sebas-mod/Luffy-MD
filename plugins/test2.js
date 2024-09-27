@@ -51,7 +51,7 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
     };
 
     // Generando y enviando el mensaje
-    let msgL = generateWAMessageFromContent(m.chat, {
+    let msgL = generateWAMessage(m.chat, {
       viewOnceMessage: {
         message
       }
