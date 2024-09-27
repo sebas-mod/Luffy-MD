@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
   }
 };
 
-handler.command = /^(xvideosearch)$/i;
+handler.command = /^(xvideosearchkdk)$/i;
 export default handler;
 
 async function searchXvideos(search) {
