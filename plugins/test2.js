@@ -28,7 +28,7 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
       headerType: 1
     };
 
-    await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
+    await conn.sendList(m.chat, buttonMessage, { quoted: m });
 
   } catch (e) {
     console.error(e);
