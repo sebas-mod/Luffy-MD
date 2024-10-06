@@ -21,7 +21,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'audios': '𝐀𝐔𝐃𝐈𝐎𝐒',
 }
-let img = 'https://i.ibb.co/YcdFyft/file.jpg'
+let img = 'https://iili.io/dsS9lja.md.png'
 
   try {
           // DEFAULT MENU
