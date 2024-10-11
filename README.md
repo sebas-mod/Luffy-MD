@@ -57,6 +57,10 @@
 
 ### ☁️ SKY ULTRA PLUS
 <a href="https://dash.corinplus.com"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
+
+<details>
+ <summary><b>:paperclip: Enlaces Importantes</b></summary>
+
 ### Información sobre Sky
 - **Dashboard:** [`Aquí`](https://dash.skyultraplus.com)
 - **Panel:** [`Aquí`](https://panel.skyultraplus.com)
@@ -65,7 +69,7 @@
 - **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
 - **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
 
-***
+</details>
 
 #### 🟢 ACTIVAR EN CODES SPACES 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
