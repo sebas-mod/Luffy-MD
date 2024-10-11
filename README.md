@@ -55,31 +55,17 @@
 
 </details>
 
-### **`SUPERIORITY PRO HOSTING 🤖`**
-<a href="https://dash.superiority.pro/login"><img src="https://qu.ax/TiBm.jpg" height="125px"></a>
+### ☁️ SKY ULTRA PLUS
+<a href="https://dash.corinplus.com"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
+### Información sobre Sky
+- **Dashboard:** [`Aquí`](https://dash.skyultraplus.com)
+- **Panel:** [`Aquí`](https://panel.skyultraplus.com)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
+- **Comunidad:** [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
+- **Contacto(s):** [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
+- **Discord:** [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
 
-<details>
- <summary><b>:paperclip: Enlaces Importantes</b></summary>
-
-- **Dashboard:** [`Aquí`](https://store.azuraultra-host.pro)
-- **Grupo - Soporte:** [`Aquí`](https://chat.whatsapp.com/LbjpDV0KmZ48iHFSy6n1Gz)
-- **Canal - Oficial:** [`Aquí`](https://whatsapp.com/channel/0029VaoRzN0KmCPMFNe3TD1b)
-
-</details>
-
-### **`AZURA ULTRA HOSTING 👾`**
-<a href="https://store.azuraultra-host.pro/login"><img src="https://qu.ax/lgUn.jpg" height="125px"></a>
-
-<details>
- <summary><b>:paperclip: Enlaces Importantes</b></summary>
-
-- **Dashboard:** [`Aquí`](https://control.azuraultra-host.pro/)
-- **Panel:** [`Aquí`](https://control.azuraultra-host.pro/)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VaWABAMG8l5K8K9PAB3v)
-
-<a href="https://store.azuraultra-host.pro/login"><img src="https://i.ibb.co/MS4dCJy/File.jpg" height="200px"></a>
-
-</details>
+***
 
 #### 🟢 ACTIVAR EN CODES SPACES 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
