@@ -4,7 +4,7 @@
  <p align="center">🎃 WhatsApp Bot Node-Js.</p>
 </p>
 
-![Genesis](https://iili.io/dsSjX07.md.png)
+![Genesis](https://pomf2.lain.la/f/g2vadfmw.jpg)
 <div align="center">
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Oswald&weight=300&size=37&duration=3000&pause=100&color=000000&background=601D6E00&center=true&vCenter=true&repeat=true&random=FALSO&width=660&height=90&lines=Angel-OFC+lanzó+la mejor+versión;De+Genesis Bot - 1.5.1;Con+nuevos+comandos+y+mejoras;GenesisBot-MD+El+Mejor Bot+De+WhatsApp" alt="Typing SVG"/></a>
 </div>
