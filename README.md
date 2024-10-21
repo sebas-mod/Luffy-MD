@@ -74,6 +74,7 @@
 #### 🟢 ACTIVAR EN CODES SPACES 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=OfcDiego/YaemoriBot-MD&ref=main&geo=UsEast)
 
+
 ### ☁️ COLABORADORES
 
 <a href="https://github.com/MauroAzcurra"><img src="https://github.com/MauroAzcurra.png" width="100" height="100" alt="MauroAzcurra"/></a>
