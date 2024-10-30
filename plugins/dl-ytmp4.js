@@ -40,7 +40,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     await m.react('📀');
     
     const vid = (await yts(text)).all[0];
-    await conn.sendFile(m.chat, dl_url, 'yt.mp4', `${title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n00:15 ━━━━●────── ${vid.timestamp}`, m);
+    await conn.sendFile(m.chat, dl_url, 'yt.mp4', `\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n00:15 ━━━━●────── `, m);
     
   } catch (error) {
     console.log(error);
