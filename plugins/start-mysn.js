@@ -32,7 +32,7 @@ let handler = async function (m, { conn, text, usedPrefix }) {
 }
 
 handler.help = ['versn']
-handler.tags = ['xp']
+handler.tags = ['start']
 handler.command = /^(versn)$/i
 handler.register = true
 export default handler
