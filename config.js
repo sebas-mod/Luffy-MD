@@ -7,7 +7,7 @@ import PhoneNumber from 'awesome-phonenumber'
 import fs from 'fs'
 
 /*============= MAIN INFO =============*/
-global.owner = [['59168683798', 'AngelDev', true]]
+global.owner = [['59168683798', 'AngelitoDev', true]]
 global.mods = []
 global.prems = []
 global.nomorbot = '5493816785382'
