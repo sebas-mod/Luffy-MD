@@ -4,6 +4,15 @@ import moment from 'moment-timezone'
 
 let handler = m => m
 handler.all = async function (m) {
+let imagenes = ["https://pomf2.lain.la/f/41appdgm.jpg",
+"https://pomf2.lain.la/f/r937l3ev.jpg",
+"https://pomf2.lain.la/f/20hjv20z.jpg",
+"https://pomf2.lain.la/f/ktvr0eqw.jpg",
+"https://pomf2.lain.la/f/s8zmmy6i.jpg",
+"https://pomf2.lain.la/f/352qn0ng.jpg",
+"https://pomf2.lain.la/f/5g0urgp.jpg"]
+
+let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
     let name = await conn.getName(m.sender)
     let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
     try {
@@ -11,9 +20,10 @@ handler.all = async function (m) {
     } catch (e) {
     } finally {
 
+        //global.bg = await (await fetch(img)).buffer()
         global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
 
-        // Modulo 
+        // Module 
         global.fetch = (await import('node-fetch')).default
         global.bochil = await import('@bochilteam/scraper')
         global.fs = fs
@@ -21,44 +31,42 @@ handler.all = async function (m) {
         const _uptime = process.uptime() * 1000
 
 
+        // ucapan ini mah
         global.ucapan = ucapan()
 
-        global.ephemeral = '86400'
+        // pesan sementara
+        global.ephemeral = '86400' // 86400 = 24jam, kalo ingin di hilangkan ganti '86400' jadi 'null' atau ''
 
-
-global.rcanal = {
+        // externalAdReply atau text with thumbnail. gatau bahasa Inggris? coba translate!
+ global.rcanal = {
  contextInfo: {
-     	isForwarded: true,
+             isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363348355703366@newsletter",
+      newsletterJid: "120363220939514640@newsletter",
       serverMessageId: 100,
-      newsletterName: global.ucapan,
+      newsletterName: '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑰𝑨 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
    }, 
    externalAdReply: {
     showAdAttribution: true, 
-    title: "Waguri Ai ✧", 
-    body: wm, 
-    mediaUrl: "https://pomf2.lain.la/f/ut2z21cs.jpg", 
+    title: wm, 
+    body: "", 
+    mediaUrl: null, 
     description: null, 
     previewType: "PHOTO", 
-    thumbnailUrl: "https://pomf2.lain.la/f/ut2z21cs.jpg", 
-    thumbnail: fs.readFileSync('./media/fake.jpg'),
-    sourceUrl: sig, 
+    thumbnailUrl: icono, 
+    sourceUrl: "https://wa.me/5493865860048", 
     mediaType: 1, 
-    previewType: 0,
-    renderLargerThumbnail: false 
-    }, 
+    renderLargerThumbnail: false }, 
     }, 
     }
-    
 
-global.adReply = {
+global.fake = {
     contextInfo: {
-    	isForwarded: true,
+            isForwarded: true,
     forwardedNewsletterMessageInfo: {
       newsletterJid: "120363348355703366@newsletter",
       serverMessageId: 100,
-      newsletterName: global.ucapan,
+      newsletterName: '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑰𝑨 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
     },
     },
   }
