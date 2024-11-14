@@ -34,7 +34,7 @@ await conn.sendFile(m.chat, img, 'img.jpg', txt, m, null, fake)
 await m.react('✅')
 }
 handler.help = ['reg'].map(v => v + ' *<nombre.edad>*')
-handler.tags = ['rg']
+handler.tags = ['start']
 
 handler.command = ['verify', 'reg', 'register', 'registrar'] 
 
