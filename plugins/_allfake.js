@@ -64,7 +64,7 @@ global.fake = {
     contextInfo: {
             isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363348355703366@newsletter",
+      newsletterJid: "120363220939514640@newsletter",
       serverMessageId: 100,
       newsletterName: '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑰𝑨 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
     },
