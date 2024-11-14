@@ -40,7 +40,7 @@ let handler = async (m, { conn, args }) => {
 }
 
 handler.help = ['fb <link>']
-handler.tags = ['downloader']
+handler.tags = ['dl']
 handler.command = /^(fbdownload|facebook|fb(dl)?)$/i
 
 handler.limit = true
