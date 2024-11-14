@@ -14,6 +14,7 @@ let imagenes = ["https://pomf2.lain.la/f/41appdgm.jpg",
 
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
     let name = await conn.getName(m.sender)
+    let redes = [gp, gp2, canal, instagram].getRandom()
     let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
     try {
         pp = await this.profilePictureUrl(m.sender, 'image')
@@ -54,7 +55,7 @@ let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
     description: null, 
     previewType: "PHOTO", 
     thumbnailUrl: icono, 
-    sourceUrl: "https://wa.me/5493865860048", 
+    sourceUrl: ${redes}, 
     mediaType: 1, 
     renderLargerThumbnail: false }, 
     }, 
