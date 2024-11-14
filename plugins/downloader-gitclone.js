@@ -17,7 +17,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 }
 
 handler.menudownload = ['gitclone']
-handler.tagsdownload = ['search']
+handler.tagsdownload = ['dl']
 handler.command = /^(gitclone)$/i
 
 handler.premium = false
