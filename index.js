@@ -1,4 +1,4 @@
-console.log('✦ Iniciando bot...')
+console.log('🤍 Iniciando el mejor Bot de WhatsApp...')
 
 import yargs from 'yargs'
 import cfonts from 'cfonts'
@@ -16,8 +16,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname) // Bring in the ability to create the 'require' method
 const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
 
-say('Waguri Ai', { font: 'chrome', align: 'center', gradient: ['blue', 'green'] })
-say(`Whatsapp Bot esm by KenisawaDev`, { font: 'console', align: 'center', gradient: ['blue', 'green'] })
+say('Genesis IA', { font: 'block', align: 'center', gradient: ['blue', 'green'] })
+say(`Developed By • Angel-OFC`, { font: 'console', align: 'center', gradient: ['blue', 'green'] })
 
 var isRunning = false
 /**
@@ -32,7 +32,7 @@ function start(file) {
   setupMaster({ exec: args[0], args: args.slice(1) })
   let p = fork()
   p.on('message', data => {
-    console.log('[✅RECEIVED]', data)
+    console.log('[✅ RECIBIDO]', data)
     switch (data) {
       case 'reset':
         p.process.kill()
@@ -46,7 +46,7 @@ function start(file) {
   })
   p.on('exit', (_, code) => {
     isRunning = false
-    console.error('[✦] Salió con el código:', code)
+    console.error('[❗] Salió con código:', code)
     if (code !== 0) return start(file)
     watchFile(args[0], () => {
       unwatchFile(args[0])
@@ -54,6 +54,7 @@ function start(file) {
     })
   })
   let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+  if (!opts['test'])
     if (!rl.listenerCount()) rl.on('line', line => {
       p.emit('message', line.trim())
     })
