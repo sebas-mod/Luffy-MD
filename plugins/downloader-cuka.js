@@ -90,7 +90,7 @@ let { title, thumbnail, quality, downloadUrl } = dataos
 //let { url } = dataos
 }
 handler.help = ['playyt'];
-handler.tags = ['downloader'];
+handler.tags = ['dl'];
 handler.command = /^(playyt)$/i;
 
 export default handler;
