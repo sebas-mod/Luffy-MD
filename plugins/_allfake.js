@@ -49,8 +49,8 @@ let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
    }, 
    externalAdReply: {
     showAdAttribution: true, 
-    title: wm, 
-    body: "", 
+    title: titulowm, 
+    body: titu, 
     mediaUrl: null, 
     description: null, 
     previewType: "PHOTO", 
