@@ -36,8 +36,8 @@ global.stickauth = `© Genesis Ai By Angelito-OFC`
 global.logo7 = fs.readFileSync('./thumbnail.jpg')
 
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.group = 'https://chat.whatsapp.com/GqKwwoV2JJaJDP2SL7SddX'
-global.group2 = 'https://chat.whatsapp.com/Fn5Ipyxu6mE6qEQlwWZTwU'
+global.gp = 'https://chat.whatsapp.com/GqKwwoV2JJaJDP2SL7SddX'
+global.g2 = 'https://chat.whatsapp.com/Fn5Ipyxu6mE6qEQlwWZTwU'
 global.canal = 'https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y'
 global.github = 'https://github.com/Angelito-OFC/GenesisBot-MD' 
 global.instagram = 'https://www.instagram.com/usxr_angelito0' 
