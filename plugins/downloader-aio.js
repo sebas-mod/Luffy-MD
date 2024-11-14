@@ -154,7 +154,7 @@ class RetaTube extends API {
 }
 
 handler.help = ['aio'].map(v => v + ' <link>')
-handler.tags = ['downloader']
+handler.tags = ['dl']
 handler.command = /^(aio)$/i
 
 handler.limit = true
