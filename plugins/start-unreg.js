@@ -8,7 +8,7 @@ let handler = async function (m, { args }) {
   m.reply('```✧ Ya no está registradx!```')
 }
 handler.help = ['', 'ister'].map(v => 'unreg' + v + ' <SN>')
-handler.tags = ['xp']
+handler.tags = ['start']
 
 handler.command = /^unreg(ister)?$/i
 handler.register = true
