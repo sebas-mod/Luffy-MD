@@ -108,7 +108,7 @@ console.log(apksearch.items)
 //console.log(apkdown)
 }
 handler.help = ['apk','android1'];
-handler.tags = ['downloader'];
+handler.tags = ['dl'];
 handler.command = /^(apk|android1)$/i;
 
 export default handler;
