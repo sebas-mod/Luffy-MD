@@ -38,7 +38,7 @@ let handler = async (m, { conn, args }) => {
 }
 
 handler.help = ['ig'].map(v => v + ' <link>')
-handler.tags = ['downloader']
+handler.tags = ['dl']
 
 handler.command = /^(ig(dl)?)$/i
 handler.limit = true
