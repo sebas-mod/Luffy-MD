@@ -139,7 +139,7 @@ global.conn = makeWASocket(connectionOptions)
 conn.isInit = false
 
 if (usePairingCode && !conn.authState.creds.registered) {
-  const phoneNumber = await question(chalk.blue(' Ingresa el número de WhatsApp en el cual estará la Bot\n'))
+  const phoneNumber = await question(chalk.blue('Ingresa el número de WhatsApp en el cual estará la Bot\n'))
   
   if (conn.requestPairingCode) {
     let code = await conn.requestPairingCode(phoneNumber);
