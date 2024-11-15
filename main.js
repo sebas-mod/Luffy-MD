@@ -259,14 +259,8 @@ process.on('uncaughtException', console.error)
 let isInit = true
 let handler = await import('./handler.js')
 global.reloadHandler = async function (restatConn) {
-  /*try {
-      const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)*/
   try {
-    // Jika anda menggunakan replit, gunakan yang sevenHoursLater dan tambahkan // pada const Handler
-    // Default: server/vps/panel, replit + 7 jam buat jam indonesia
-    // const sevenHoursLater = Date.now() + 7 * 60 * 60 * 1000;
     const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
-    // const Handler = await import(`./handler.js?update=${sevenHoursLater}`).catch(console.error)
     if (Object.keys(Handler || {}).length) handler = Handler
   } catch (e) {
     console.error(e)
@@ -328,12 +322,12 @@ async function filesInit() {
       const module = await import(file)
       global.plugins[filename] = module.default || module
     } catch (e) {
-//      conn.logger.error(e)
+      conn.logger.error(e)
       delete global.plugins[filename]
     }
   }
 }
-filesInit().then(_ => Object.keys(global.plugins)).catch(console.error)
+filesInit().then(_ => Object.keys(global.plugins))
 
 global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
@@ -404,4 +398,3 @@ async function _quickTest() {
 }
 _quickTest()
   .then(() => conn.logger.info('☑️ Prueba rápida realizada, nombre de la sesión ~> creds.json'))
-  .catch(console.error)
