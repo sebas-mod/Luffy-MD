@@ -287,8 +287,8 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-conn.welcome = '❖━━━━━━[ BIENVENIDO ]━━━━━━❖\n\n┏------━━━━━━━━•\n│☘︎ @subject\n┣━━━━━━━━┅┅┅\n│( 👋 Hola @user)\n├[ Introducción ]—\n│ Nombre: \n│ Edad: \n│ Genero:\n┗------━━┅┅┅\n\n------┅┅ Descripción ┅┅––––––\n@desc'
-  conn.bye = '❖━━━━━━[ BYEBYE ]━━━━━━❖\n\nSayonara @user 👋😃'
+conn.welcome = '*⭒─ׄ─ׅ─ׄ─⭒ \`BIENVENIDA\` ⭒─ׄ─ׅ─ׄ─⭒*\n\n╭── ︿︿︿︿︿ *⭒   ⭒   ⭒   ⭒   ⭒   ⭒*\n┊ ‹‹ *Welcome* :: @user\n┊• @subject\n╰─── ︶︶︶︶ ✰⃕  ⌇ *⭒ ⭒ ⭒*   ˚̩̥̩̥*̩̩͙✩'
+  conn.bye = '*⭒─ׄ─ׅ─ׄ─⭒ \`ADIOS\` ⭒─ׄ─ׅ─ׄ─⭒*\n\n╭── ︿︿︿︿︿ *⭒   ⭒   ⭒   ⭒   ⭒   ⭒*\n┊ ‹‹ *BYE* :: @user\n┊• *Sayonara 👋* \n╰─── ︶︶︶︶ ✰⃕  ⌇ *⭒ ⭒ ⭒*   ˚̩̥̩̥*̩̩͙✩'
   conn.spromote = '*✧ @user ahora es admin!*'
   conn.sdemote = '*✧ @user ya no es admin!*'
   conn.sDesc = '*✧ La descripción se actualizó a* \n@desc'
