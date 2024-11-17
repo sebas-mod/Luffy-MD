@@ -1,10 +1,10 @@
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
-import fs from 'fs'
 import moment from 'moment-timezone'
 import { group } from 'console'
 import PhoneNumber from 'awesome-phonenumber'
+import fs from 'fs'
 
 /*============= MAIN INFO =============*/
 global.owner = [['59168683798', 'AngelitoDev', true]]
