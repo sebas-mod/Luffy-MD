@@ -29,8 +29,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
         if (videoURL || videoURLWatermark) {
             await conn.sendFile( m.chat, videoURL, "tiktok.mp4", "`DESCARGA DE TIKTOK`"+`\n\n${infonya_gan}`, m, );
-await conn.sendFile(m.chat, dp.results.nowm, `${dp.results.title}.mp4`, ``, m)
-	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
+        await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: "audio/mp4", fileName: title + '.mp3' }, { quoted: m })
             setTimeout(async () => {
                 //await conn.sendFile( m.chat, videoURLWatermark, "tiktokwm.mp4", `*Ini Versi Watermark*\n\n${infonya_gan}`, m, );
 
