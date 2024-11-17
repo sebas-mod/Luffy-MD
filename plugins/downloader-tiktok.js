@@ -39,7 +39,7 @@ title: `${tiktokData.data.title}`,
 body: `${tiktokData.data.author.nickname}`,
 mediaType: 2, 
 sourceUrl: `${tiktokData.data.music}`,
-thumbnail: 'https://pomf2.lain.la/f/xju1w0vh.jpg', { quoted: m })
+thumbnail: await (await conn.getFile(dp.results.thumbnail)).data, { quoted: m })
 
 //        await conn.sendMessage(m.chat, { audio: { url: videoURL }, mimetype: "audio/mp4", fileName: tiktokData.data.title + '.mp3' }, { quoted: m })
             setTimeout(async () => {
