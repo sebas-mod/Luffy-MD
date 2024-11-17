@@ -507,7 +507,7 @@ export async function participantsUpdate( { id, participants, action }) {
                    if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (this.chats[id] || {}).metadata
                 for (let user of participants) {
-                    let pp = 'https://telegra.ph/file/3067b920347facbb69bb1.jpg'
+                    let pp = 'https://pomf2.lain.la/f/b03w5p5.jpg'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
@@ -519,10 +519,10 @@ export async function participantsUpdate( { id, participants, action }) {
 text: text,
 contextInfo: {
 externalAdReply: {
-title: global.wm,
-body: "Group Notifications",
+title: global.titulowm2,
+body: global.titu,
 thumbnailUrl: pp,
-sourceUrl: "https://whatsapp.com/channel/0029VarbyoN2ZjCkcPW7q33F",
+sourceUrl: "https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y",
 mediaType: 1,
 renderLargerThumbnail: true
 }}}
