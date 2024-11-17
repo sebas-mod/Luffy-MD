@@ -26,7 +26,6 @@ let estilo = (text, style = 1) => {
 };
 const defaultMenu = {
   before: `*Hola* \`%name\` *${ucapan()}*\n
-乂 _\`ᴜ\` \`ꜱ\` \`ᴜ\` \`ᴀ\` \`ʀ\` \`ɪ\` \`ᴏ\`_ 乂
 
 ➫ _\`ᴀᴄᴛɪᴠᴏ\`_ :: _%muptime_
 ➫ _\`ᴜꜱᴜᴀʀɪᴏꜱ\`_ :: _%rtotalreg de %totalreg_
@@ -34,7 +33,7 @@ const defaultMenu = {
 ➫ _\`ᴘʀᴇꜰɪᴊᴏ\`_ :: _< . >_
 ➫ _\`ᴘᴀᴛʀᴏᴄɪɴᴀᴅᴏʀ\`_ :: _Tk-Host_
 
-乂 _\`ᴄ\` \`ᴏ\` \`ᴍ\` \`ᴀ\` \`ɴ\` \`ᴅ\` \`ᴏ\` \`ꜱ\`_ 乂
+▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬
  %readmore
   `.trimStart(),
   header: '╭─(❀)❝┊ *_`%category`_* ┊❝(❀)',
@@ -49,19 +48,19 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
   }
 
   let tags = {
-    'main': 'Principal',
-    'anonymous': 'Chat Anónimo',
-    'ai': 'Funciones Ai',
-    'confesar': 'Confeciones',
-    'rpg': 'Roleplay',
-    'search': 'Busqueda',
-    'dl': 'Descargas',
-    'internet': 'Internet',
-    'anime': 'Anime',
-    'sticker': 'Sticker',
-    'tools': 'Herramientas',
-    'group': 'Grupos',
-    'owner': 'Owner',
+    'ai': 'ꜰᴜɴᴄɪᴏɴᴇꜱ ᴀɪ',
+    'search': 'ʙᴜꜱQᴜᴇᴅᴀ',
+    'dl': 'ᴅᴇꜱᴄᴀʀɢᴀꜱ',
+    'tools': 'ʜᴇʀʀᴀᴍɪᴇɴᴛᴀꜱ',
+    'main': 'ᴘʀɪɴᴄɪᴘᴀʟ',
+    'anonymous': 'ᴄʜᴀᴛ ᴀɴᴏɴɪᴍᴏ',
+    'confesar': 'ᴄᴏɴꜰᴇᴄɪᴏɴᴇꜱ',
+    'rpg': 'ʀᴏʟᴇᴘʟᴀʏ',
+    'internet': 'ɪɴᴛᴇʀɴᴇᴛ',
+    'anime': 'ᴀɴɪᴍᴇ',
+    'sticker': 'ꜱᴛɪᴄᴋᴇʀ',
+    'group': 'ɢʀᴜᴘᴏꜱ',
+    'owner': 'ᴏᴡɴᴇʀ',
   }
 
   try {
