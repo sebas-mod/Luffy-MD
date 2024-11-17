@@ -30,10 +30,10 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
         if (videoURL || videoURLWatermark) {
 
-            await m.react('✅');
             await conn.sendFile(m.chat, videoURL, 'tiktok.mp4', txt, m, null, rcanal);
 
        await conn.sendMessage(m.chat, { audio: { url: videoURL }, mimetype: "audio/mp4", fileName: tiktokData.data.title + '.mp3' }, { quoted: m })
+            await m.react('✅');
             setTimeout(async () => {
             }, 1500);
         } else {
