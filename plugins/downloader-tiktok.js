@@ -38,9 +38,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
         txt += `> 🤍 *\`» Descargas :\`* ${tiktokData.data.download_count}\n\n`;
         txt += '> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ\n';
 
-
         if (videoURL || videoURLWatermark) {
-          //  await conn.sendFile( m.chat, videoURL, "tiktok.mp4", "`DESCARGA DE TIKTOK`"+`\n\n${txt}`, m, null, rcanal );
 
             await conn.sendFile(m.chat, videoURL, 'tiktok.mp4', txt, m, null, rcanal);
 
@@ -58,9 +56,6 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['tiktok'].map((v) => v + ' <link>')
 handler.tags = ['downloader']
 handler.command = /^t(t|iktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i
-
-handler.disable = false
-handler.register = true
 handler.limit = true
 
 export default handler
