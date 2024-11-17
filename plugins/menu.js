@@ -258,18 +258,18 @@ function clockStringP(ms) {
 }
 function ucapan() {
     const time = moment.tz('America/Buenos_Aires').format('HH')
-    let res = "Buenas Noches 🌙"
+    let res = "Buenas Noches🌙"
     if (time >= 5) {
-        res = "Buena Madrugada 🌄"
+        res = "Buena Madrugada🌄"
     }
     if (time > 10) {
-        res = "Buenos días ☀️"
+        res = "Buenos días☀️"
     }
     if (time >= 12) {
-        res = "Buenas Tardes 🌅"
+        res = "Buenas Tardes🌅"
     }
     if (time >= 19) {
-        res = "Buenas Noches 🌙"
+        res = "Buenas Noches🌙"
     }
     return res
 }
