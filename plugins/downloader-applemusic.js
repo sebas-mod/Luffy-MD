@@ -108,7 +108,18 @@ const appledown = {
 let dataos = await appledown.download(text);
 let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
 
-m.reply(`_✧ Enviando ${name} (${artist}/${duration})_\n\n> ${url}`);
+let text = `*\`【 A P P L E - M U S I C 】\`*
+
+> *🤍 \`TÍTULO:\`* ${name}
+> *🤍 \`ARTISTAS:\`* ${artists}
+> *🤍 \`ALBUM:\`* ${albumname}
+> *🤍 \`DURACIÓN:\`* ${duration}
+> *🤍 \`URL:\`* ${url}
+
+> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`
+            await m.react('✅');
+            await conn.sendFile(m.chat, thumb, `image.jpeg`, text, m, null, fake);
+// m.reply(`_✧ Enviando  (${artist}/${duration})_\n\n> ${url}`);
       const doc = {
       audio: { url: download },
       mimetype: 'audio/mp4',
