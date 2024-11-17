@@ -13,7 +13,7 @@ let imagenes = ["https://pomf2.lain.la/f/41appdgm.jpg",
 "https://pomf2.lain.la/f/5g0urgp.jpg"]
 
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
-let redes = [group, group2, github, instagram].getRandom()
+let redes = [canal, group, group2, github, instagram].getRandom()
     let name = await conn.getName(m.sender)
     let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
     try {
