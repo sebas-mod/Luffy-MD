@@ -52,7 +52,7 @@ global.rcanal = {
     description: null, 
     previewType: "PHOTO", 
     thumbnailUrl: icono, 
-    sourceUrl: "https://wa.me/5493865860048", 
+    sourceUrl: redes, 
     mediaType: 1, 
     renderLargerThumbnail: false  
     }, 
