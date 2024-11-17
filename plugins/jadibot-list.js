@@ -9,7 +9,9 @@ let handler = async (m, { usedPrefix }) => {
 
 ${users.map((user, i) => `✧ ${i + 1}. @${user?.jid?.split?.("@")?.[0] ?? jidNormalizedUser(user?.id)?.split?.("@")?.[0] ?? user?.id}${user?.name ? ` (${user.name})` : ''}\n✦   https://wa.me/${parseInt(user?.jid ?? jidNormalizedUser(user?.id))}?text=${usedPrefix}menu`).join('\n')}
 `;
-    await m.reply(text.trim());
+await stars.sendFile(m.chat, img, 'thumbnail.jpg', text.trim, m, null, rcanal, false, { mentions: stars.parseMention(responseMessage) })
+
+  //  await m.reply(text.trim());
 };
 
 handler.help = ['listjadibot'];
