@@ -1,4 +1,4 @@
-/* import { jidNormalizedUser } from "@adiwajshing/baileys";
+import { jidNormalizedUser } from "@adiwajshing/baileys";
 import Jadibots from "../lib/jadibots.js";
 let handler = async (m, { usedPrefix }) => {
     const users = [...Jadibots.conns.entries()].map(([k, v]) => v.user);
@@ -15,9 +15,9 @@ handler.help = ['listjadibot'];
 handler.tags = ['jadibot'];
 handler.command = /^(list(jadi)?bot|(jadi)?botlist)$/i;
 
-export default handler; */
+export default handler;
 
-import ws from 'ws'
+/* import ws from 'ws'
 
 async function handler(m, { conn: stars, usedPrefix }) {
   let uniqueUsers = new Map()
@@ -46,4 +46,4 @@ handler.help = ['bots']
 handler.tags = ['serbot']
 handler.command = ['listjadibot', 'bots']
 
-export default handler
+export default handler */
