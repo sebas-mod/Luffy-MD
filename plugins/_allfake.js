@@ -4,6 +4,15 @@ import moment from 'moment-timezone'
 
 let handler = m => m
 handler.all = async function (m) {
+let imagenes = ["https://pomf2.lain.la/f/41appdgm.jpg",
+"https://pomf2.lain.la/f/r937l3ev.jpg",
+"https://pomf2.lain.la/f/20hjv20z.jpg",
+"https://pomf2.lain.la/f/ktvr0eqw.jpg",
+"https://pomf2.lain.la/f/s8zmmy6i.jpg",
+"https://pomf2.lain.la/f/352qn0ng.jpg",
+"https://pomf2.lain.la/f/5g0urgp.jpg"]
+
+let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
     let name = await conn.getName(m.sender)
     let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
     try {
@@ -36,17 +45,15 @@ global.rcanal = {
    }, 
    externalAdReply: {
     showAdAttribution: true, 
-    title: " Waguri Ai ✧", 
-    body: '🤍 ¡Génesis La Mejor!', 
-    mediaUrl: "https://pomf2.lain.la/f/ut2z21cs.jpg", 
+    title: wm, 
+    body: "🤍 ¡Génesis La Mejor!", 
+    mediaUrl: null, 
     description: null, 
     previewType: "PHOTO", 
-    thumbnailUrl: "https://pomf2.lain.la/f/ut2z21cs.jpg", 
-    thumbnail: fs.readFileSync('./media/fake.jpg'),
-    sourceUrl: canal, 
+    thumbnailUrl: icono, 
+    sourceUrl: "https://wa.me/5493865860048", 
     mediaType: 1, 
-    previewType: 0,
-    renderLargerThumbnail: false 
+    renderLargerThumbnail: false  
     }, 
     }, 
     }
