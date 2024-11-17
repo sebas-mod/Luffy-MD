@@ -52,7 +52,7 @@ global.rcanal = {
     }
     
 
-global.adReply = {
+global.fake = {
     contextInfo: {
     	isForwarded: true,
     forwardedNewsletterMessageInfo: {
