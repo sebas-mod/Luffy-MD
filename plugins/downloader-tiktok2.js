@@ -22,9 +22,9 @@ conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
         }
       }
     };
-    await conn.sendMessage(m.chat, doc, { quoted: m });
 	await conn.sendFile(m.chat, dp.results.nowm, `${dp.results.title}.mp4`, ``, m)
-	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
+	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }});
+    await conn.sendMessage(m.chat, doc, { quoted: m })
 }
 handler.help = ['tiktok2']
 handler.tags = ['downloader']
