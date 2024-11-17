@@ -45,7 +45,7 @@ global.rcanal = {
    }, 
    externalAdReply: {
     showAdAttribution: true, 
-    title: wm, 
+    title: titulowm, 
     body: "🤍 ¡Génesis La Mejor!", 
     mediaUrl: null, 
     description: null, 
