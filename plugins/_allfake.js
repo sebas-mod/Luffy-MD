@@ -48,7 +48,7 @@ global.rcanal = {
     showAdAttribution: true, 
     title: titulowm, 
     body: "🤍 ¡Génesis La Mejor!", 
-    mediaUrl: null, 
+    mediaUrl: redes, 
     description: null, 
     previewType: "PHOTO", 
     thumbnailUrl: icono, 
