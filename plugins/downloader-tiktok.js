@@ -8,7 +8,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
     }
 
     try {
-        await conn.reply ( m.chat, "✧ Espere un momento, estoy descargando su video...", m, );
+        await m.react('🕓');
 
         const tiktokData = await tiktokdl(args[0]);
 
@@ -30,6 +30,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
         if (videoURL || videoURLWatermark) {
 
+            await m.react('✅');
             await conn.sendFile(m.chat, videoURL, 'tiktok.mp4', txt, m, null, rcanal);
 
        await conn.sendMessage(m.chat, { audio: { url: videoURL }, mimetype: "audio/mp4", fileName: tiktokData.data.title + '.mp3' }, { quoted: m })
