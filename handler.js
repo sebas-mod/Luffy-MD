@@ -595,21 +595,18 @@ _@${participant.split`@`[0]} eliminó un mensaje._
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: "> _*✧ Perdon, Este comando es solo para mi Owner.*_",
-        owner: "> _*✧ Perdon, Solo mi creador puede usar este comando.*_",
-        mods: "> _*✧ Perdon, Este comando solo es para mods*_",
-        premium: "> _*✧ No eres un usuario Premium, Habla con mi owner*_",
-        group: "> _*✧ Perdon, Este comando solo es para grupos*_",
-        private: "> _*✧ Ve a mi chat privado y usa este comando*_",
-        admin: "> _*✧ Quien eres?, tu no eres admin*_",
-        botAdmin: "> _*✧ Es necesario que sea admin primero para usar esta función*_",
-        unreg: "> _*‼️USUARIO NO REGISTRADO‼️*_\n\n`Para registrarse:`\n\n> usa el comando .reg",
-        restrict: "> _*✧ Comando desactivado por mi Owner`*_" 
+        rowner: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTA FUNCIÓN SOLO PUEDE SER USADA POR MI CREADOR!!```", 
+        owner: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTA FUNCIÓN SOLO PUEDE SER USADA POR MI DESARROLLADOR!!```", 
+        mods: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTA FUNCIÓN SOLO PUEDE SER USADA POR MIS DESARROLLADORES!!```", 
+        premium: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTA FUNCIÓN SOLO ES PARA USUARIOS PREMIUM!!```", 
+        group: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTA FUNCION SOLO PUEDE SER EJECUTADA EN GRUPOS!!```", 
+        private: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTA FUNCIÓN SOLO PUEDE SER USADA EN CHAT PRIVADO!!```", 
+        admin: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS!!```", 
+        botAdmin: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡PARA USAR ESTA FUNCIÓN DEBO SER ADMIN DEL GRUPO!!```", 
+        unreg: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡NECESITAS ESTAR REGISTRADO(A) PARA USAR ESTE COMANDO, ESCRIBE #reg PARA REGISTRARTE!!```",
+        restrict: "```🤍̸̷̸̷᮫᮫໋໋݂݂ׄׄ. ¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!```"
     }[type]
-    
-    let deco_msg = "`१✿ᩧ┅═❏✧͚Wag፝uri Aiᩦ❏═┅✿ᩧ̼१`\n"+`${msg}\n`+"`︶ִֶָ⏝︶ִֶָ⏝˖ ࣪ ୨✧୧ ࣪ ˖⏝ִֶָ︶⏝ִֶָ︶`"
-    if (msg) return conn.reply(m.chat, estilo(deco_msg), m)
-}
+    if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
