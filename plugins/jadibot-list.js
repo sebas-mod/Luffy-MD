@@ -1,6 +1,7 @@
 import { jidNormalizedUser } from "@adiwajshing/baileys";
 import Jadibots from "../lib/jadibots.js";
-let handler = async (m, { usedPrefix }) => {
+async function handler(m, { conn: stars, usedPrefix }) {
+// let handler = async (m, { usedPrefix }) => {
     const users = [...Jadibots.conns.entries()].map(([k, v]) => v.user);
   let img = await (await fetch(`https://i.ibb.co/LSBGpg4/file.jpg`)).buffer()
     if (!users.length) throw m.reply("✦ No hay subbots por ahora.")
