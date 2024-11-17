@@ -1,3 +1,11 @@
+global.group = 'https://chat.whatsapp.com/GqKwwoV2JJaJDP2SL7SddX'
+global.group2 = 'https://chat.whatsapp.com/Fn5Ipyxu6mE6qEQlwWZTwU'
+global.canal = 'https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y'
+global.github = 'https://github.com/Angelito-OFC/GenesisBot-MD' 
+global.instagram = 'https://www.instagram.com/usxr_angelito0' 
+
+
+
 import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
