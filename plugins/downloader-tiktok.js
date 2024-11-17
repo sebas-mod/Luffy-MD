@@ -28,6 +28,20 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
         const videoURL = tiktokData.data.play;
         const videoURLWatermark = tiktokData.data.wmplay;
+        let txt = '';
+        txt += `*\`[ TIKTOK DOWNLOAD ]\`*\n\n`;
+        txt += `> 🤍 *\`» Título :\`* ${title || '❌'}\n`;
+        txt += `> 🤍 *\`» Autor :\`* ${author || '❌'}\n`;
+        txt += `> 🤍 *\`» Visitas :\`* ${views || '❌'}\n`;
+        txt += `> 🤍 *\`» Likes :\`* ${like || '❌'}\n`; 
+        txt += `> 🤍 *\`» Comentarios :\`* ${comment || '❌'}\n`;
+        txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
+        txt += '> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ\n';
+
+//VIDEO TIKTOK
+        await conn.sendFile(m.chat, video, 'tiktok.mp4', txt, m, null, rcanal);
+
+
         const txt = `> 🤍 *\`» Título :\`* ${tiktokData.data.title}\n> 🤍 *\`» Autor :\`* ${tiktokData.data.author.nickname || "No info"
             }\n> 🤍 *\`» Visitas :\`* ${tiktokData.data.play_count} \n*✧ Publicado:* ${tiktokData.data.create_time
             }\n\n*✧ Estado:*\n=====================\nLikes = ${tiktokData.data.digg_count
