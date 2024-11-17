@@ -31,6 +31,7 @@ global.listo = '*Aqui tiene ฅ^•ﻌ•^ฅ*'
 global.vs = '2.0.0'
 global.namechannel = '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑩𝒐𝒕 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍'
 global.stickauth = `© Genesis Ai By Angelito-OFC`
+global.dis = ':⁖֟⊱┈֟፝❥'
 
 //• ↳ ◜𝑰𝑴𝑨́𝑮𝑬𝑵𝑬𝑺◞ • 🌇
 global.logo7 = fs.readFileSync('./thumbnail.jpg')
