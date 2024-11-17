@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
   let isAll = false
   let isUser = false
   switch (type) {
-    case 'welcome':
+    case 'bienvenida':
       if (!m.isGroup) {
         if (!isOwner) {
           global.dfail('group', m, conn)
@@ -14,6 +14,18 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         }
       } else if (!isAdmin) {
         global.dfail('admin', m, conn)
+        throw false
+      }
+      chat.bienvenida = isEnable
+      break
+    case 'welcome':
+      if (!m.isGroup) {
+        if (!isOwner) {
+          global.dfail('group', m, conn)
+          throw false
+        }
+      } else if (!isAdmin) {
+        global.dfail('rowner', m, conn)
         throw false
       }
       chat.welcome = isEnable
