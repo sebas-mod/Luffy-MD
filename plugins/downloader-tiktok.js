@@ -1,3 +1,13 @@
+let txt = '';
+txt += `*\`[ TIKTOK DOWNLOAD ]\`*\n\n`;
+txt += `> 🤍 *\`» Título :\`* ${title || '❌'}\n`;
+txt += `> 🤍 *\`» Autor :\`* ${author || '❌'}\n`;
+txt += `> 🤍 *\`» Visitas :\`* ${views || '❌'}\n`;
+txt += `> 🤍 *\`» Likes :\`* ${like || '❌'}\n`; 
+txt += `> 🤍 *\`» Comentarios :\`* ${comment || '❌'}\n`;
+txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
+txt += '> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ\n';
+
 import fetch from 'node-fetch'
 import ffmpeg from "fluent-ffmpeg"
 
@@ -18,17 +28,17 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
         const videoURL = tiktokData.data.play;
         const videoURLWatermark = tiktokData.data.wmplay;
-        const infonya_gan = `*✧ Descripción:* ${tiktokData.data.title}\n*✧ Publicado:* ${tiktokData.data.create_time
+        const txt = `> 🤍 *\`» Título :\`* ${tiktokData.data.title}\n> 🤍 *\`» Autor :\`* ${tiktokData.data.author.nickname || "No info"
+            }\n> 🤍 *\`» Visitas :\`* ${tiktokData.data.play_count} \n*✧ Publicado:* ${tiktokData.data.create_time
             }\n\n*✧ Estado:*\n=====================\nLikes = ${tiktokData.data.digg_count
             }\nComentarios = ${tiktokData.data.comment_count}\nCompartidas = ${tiktokData.data.share_count
-            }\nVistas = ${tiktokData.data.play_count}\nDescargas = ${tiktokData.data.download_count
-            }\n=====================\n\nUploader: ${tiktokData.data.author.nickname || "No info"
-            }\n(${tiktokData.data.author.unique_id} - https://www.tiktok.com/@${tiktokData.data.author.unique_id
+            }\nVistas = \nDescargas = ${tiktokData.data.download_count
+            }\n=====================\n\n(${tiktokData.data.author.unique_id} - https://www.tiktok.com/@${tiktokData.data.author.unique_id
             } )\n*✧ Sonido:* ${tiktokData.data.music
             }\n`;
 
         if (videoURL || videoURLWatermark) {
-            await conn.sendFile( m.chat, videoURL, "tiktok.mp4", "`DESCARGA DE TIKTOK`"+`\n\n${infonya_gan}`, m, null, rcanal );
+            await conn.sendFile( m.chat, videoURL, "tiktok.mp4", "`DESCARGA DE TIKTOK`"+`\n\n${txt}`, m, null, rcanal );
 
        await conn.sendMessage(m.chat, { audio: { url: videoURL }, mimetype: "audio/mp4", fileName: tiktokData.data.title + '.mp3' }, { quoted: m })
             setTimeout(async () => {
