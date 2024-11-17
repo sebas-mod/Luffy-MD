@@ -29,6 +29,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
         if (videoURL || videoURLWatermark) {
             await conn.sendFile( m.chat, videoURL, "tiktok.mp4", "`DESCARGA DE TIKTOK`"+`\n\n${infonya_gan}`, m, null, rcanal );
+
 await conn.sendMessage(m.chat, { audio: { url: videoURL }, mimetype: "audio/mp4", fileName: tiktokData.data.title + '.mp3', quoted: m, contextInfo: {
 'forwardingScore': 200,
 'isForwarded': true,
@@ -38,7 +39,7 @@ title: `${tiktokData.data.title}`,
 body: `${tiktokData.data.author.nickname}`,
 mediaType: 2, 
 sourceUrl: `${tiktokData.data.music}`,
-thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
+thumbnail: 'https://pomf2.lain.la/f/xju1w0vh.jpg', { quoted: m })
 
 //        await conn.sendMessage(m.chat, { audio: { url: videoURL }, mimetype: "audio/mp4", fileName: tiktokData.data.title + '.mp3' }, { quoted: m })
             setTimeout(async () => {
