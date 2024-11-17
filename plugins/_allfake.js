@@ -43,7 +43,7 @@ global.rcanal = {
     previewType: "PHOTO", 
     thumbnailUrl: "https://pomf2.lain.la/f/ut2z21cs.jpg", 
     thumbnail: fs.readFileSync('./media/fake.jpg'),
-    sourceUrl: sig, 
+    sourceUrl: canal, 
     mediaType: 1, 
     previewType: 0,
     renderLargerThumbnail: false 
@@ -70,7 +70,7 @@ global.adReply = {
                     title: global.ucapan,
                     body: wm,
                     thumbnailUrl: pp,
-                    sourceUrl: sig
+                    sourceUrl: canal
                 }
             }
         }
@@ -81,7 +81,7 @@ global.adReply = {
                     title: global.ucapan,
                     body: wm,
                     thumbnailUrl: pp,
-                    sourceUrl: sfb
+                    sourceUrl: canal
                 }
             }
         }
