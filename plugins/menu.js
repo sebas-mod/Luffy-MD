@@ -25,35 +25,22 @@ let estilo = (text, style = 1) => {
   return output.join('');
 };
 const defaultMenu = {
-  before: `
-✧ *Nombre:*  %name 
-✧ *Numero:* %tag
-✧ *Usuario:* %prems
-✧ *Eris:* %limit
-✧ *Rol:* %role
+  before: `*Hola* \`%name\` *${ucapan()}*\n
+乂 _\`ᴜ\` \`ꜱ\` \`ᴜ\` \`ᴀ\` \`ʀ\` \`ɪ\` \`ᴏ\`_ 乂
 
-✧ *Día:* %week
-✧ *Fecha:* %date
-✧ *Hora:* %time
+➫ _\`ᴀᴄᴛɪᴠᴏ\`_ :: _%muptime_
+➫ _\`ᴜꜱᴜᴀʀɪᴏꜱ\`_ :: _%rtotalreg de %totalreg_
+➫ _\`ᴄᴏʀᴀᴢᴏɴᴇꜱ\`_ :: _%corazones_
+➫ _\`ᴘʀᴇꜰɪᴊᴏ\`_ :: _< . >_
+➫ _\`ᴘᴀᴛʀᴏᴄɪɴᴀᴅᴏʀ\`_ :: _Tk-Host_
 
-✧ *Nombre Bot:* %me
-✧ *Modo:* %mode
-✧ *Prefijo:* [ *%_p* ]
-✧ *Plataforma:* %platform
-✧ *Tipo:* Node.JS
-✧ *Runtina:* %muptime
-✧ *Database:* %rtotalreg de %totalreg
-
-⬣───「 *INFO CMD* 」───⬣
-│ *Ⓟ* = Premium
-│ *Ⓛ* = Eris
-▣────────────⬣
-  %readmore
+乂 _\`ᴄ\` \`ᴏ\` \`ᴍ\` \`ᴀ\` \`ɴ\` \`ᴅ\` \`ᴏ\` \`ꜱ\`_ 乂
+ %readmore
   `.trimStart(),
-    header: '╭─────『 %category 』',
-    body: '  ✧%cmd %isPremium %islimit',
-    footer: '╰–––––––––––––––༓',
-    after: ``,
+  header: '╭─(❀)❝┊ *_`%category`_* ┊❝(❀)',
+  body: '┊➫ %cmd\n',
+  footer: '╰───────────── –\n',
+  after: `> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`,
   }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
 
@@ -62,22 +49,19 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
   }
 
   let tags = {
-    'main': '`Principal`',
-    'anonymous': '`Chat Anónimo`',
-    'ai': '`Funciones Ai`',
-    'jadibot': '`Jadibots/Subbots`',
-    'confesar': '`Confeciones`',
-    'rpg': '`Roleplay`',
-    'fun': '`Divertido`',
-    'search': '`Busqueda`',
-    'downloader': '`Descargas`',
-    'internet': '`Internet`',
-    'anime': '`Anime`',
-    'nsfw': '`Nsfw`',
-    'sticker': '`Sticker`',
-    'tools': '`Herramientas`',
-    'group': '`Grupos`',
-    'owner': '`Owner`',
+    'main': 'Principal',
+    'anonymous': 'Chat Anónimo',
+    'ai': 'Funciones Ai',
+    'confesar': 'Confeciones',
+    'rpg': 'Roleplay',
+    'search': 'Busqueda',
+    'dl': 'Descargas',
+    'internet': 'Internet',
+    'anime': 'Anime',
+    'sticker': 'Sticker',
+    'tools': 'Herramientas',
+    'group': 'Grupos',
+    'owner': 'Owner',
   }
 
   try {
@@ -159,9 +143,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
     let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
 
-    let mode = global.opts['self'] || global.opts['owneronly'] ? 'Privado' : 'Publico'
+    let mode = global.opts['self'] || global.opts['owneronly'] ? 'Private' : 'Publik'
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
-    let { age, exp, limit, level, role, registered, money } = global.db.data.users[m.sender]
+    let { age, exp, corazones, level, role, registered, money } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
     let premium = global.db.data.users[m.sender].premiumTime
@@ -177,7 +161,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
         help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
         tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
         prefix: 'customPrefix' in plugin,
-        limit: plugin.limit,
+        corazones: plugin.corazones,
         premium: plugin.premium,
         enabled: !plugin.disabled,
       }
@@ -203,7 +187,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%_p' + help)
-                .replace(/%islimit/g, menu.limit ? llim : '')
+                .replace(/%iscorazones/g, menu.corazones ? corazones : '')
                 .replace(/%isPremium/g, menu.premium ? lprem : '')
                 .trim()
             }).join('\n')
@@ -227,114 +211,15 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
       xp4levelup: max - exp,
       github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
       tag, dash, m1, m2, m3, m4, cc, c1, c2, c3, c4, lprem, llim,
-      ucpn, platform, wib, mode, _p, money, age, tag, name, prems, level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+      ucpn, platform, wib, mode, _p, money, age, tag, name, prems, level, corazones, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    let fkon = {
-      key: {
-        fromMe: false,
-        participant: `${m.sender.split`@`[0]}@s.whatsapp.net`,
-        ...(m.chat ? { remoteJid: '16500000000@s.whatsapp.net' } : {})
-      },
-      message: {
-        contactMessage: {
-          displayName: `${name}`,
-          vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
-          verified: true
-        }
-      }
-    };
-
-    conn.sendFile(m.chat, "https://pomf2.lain.la/f/vdj2bxy4.jpg", 'menu.jpg', estilo(text.trim()), global.fliveLoc2, null)
-
-/*conn.sendMessage(m.chat, {
-    document: { url: "https://pomf2.lain.la/f/8lplrwo2.jpg" }, 
-          mimetype: global.doc, 
-          pageCount: 2025,
-          fileName: `Hola ${name} ~`,
-          fileLength: 100000000000000,
-          caption: estilo(text), 
-          contextInfo: {
-            forwardingScore: 2025, 
-            isForwarded: true,
-            externalAdReply: {
-              title: wm,
-              mediaType: 1,
-              thumbnailUrl: 'https://pomf2.lain.la/f/8lplrwo2.jpg',
-              mediaUrl: sig,
-              thumbnail: ``,
-              sourceType: ``,
-              sourceId: ``,
-              sourceUrl: sgc,
-              containsAutoReply: true,
-              renderLargerThumbnail: true,
-              showAdAttribution: false,
-              ctwaClid: ``,
-              ref: ``
-            }
-          }
-        }, {
-          quoted: global.fliveLoc2
-        })*/
-        
-/*				await conn.sendMessage(m.chat, {
-					document: fs.readFileSync('./media/fake.pdf'),
-					fileName: ucapan(),
-					mimetype: pickRandom(['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','application/vnd.openxmlformats-officedocument.presentationml.presentation','application/vnd.openxmlformats-officedocument.wordprocessingml.document','application/pdf']),
-					fileLength: '100000000000000',
-					pageCount: '2025',
-					caption: estilo(text),
-					contextInfo: {
-						mentionedJid: [m.sender, '0@s.whatsapp.net'],
-						forwardingScore: 10,
-						isForwarded: true,
-						forwardedNewsletterMessageInfo: {
-							newsletterJid: "120363348355703366@newsletter",
-							serverMessageId: null,
-							newsletterName: '[ Kenisawa World ]'
-						},
-						externalAdReply: {
-							title: `Hola ${name} ~`,
-							body: wm,
-							showAdAttribution: true,
-							thumbnailUrl: "https://f.uguu.se/oEElSbJO.jpg",
-							mediaType: 1,
-							previewType: 0,
-							renderLargerThumbnail: true,
-							mediaUrl: "https://f.uguu.se/oEElSbJO.jpg",
-							thumbnail: fs.readFileSync('./media/fake.jpg'),
-							sourceUrl: sgc,
-						}
-					}
-				}, { quoted: global.fliveLoc2 })*/
-
-/*conn.sendMessage(m.chat, {
-      video: { url: "https://pomf2.lain.la/f/cbo0jjrv.mp4" },
-            mimetype: 'video/mp4',
-            fileLength: 1000000,
-            caption: estilo(text.trim()),
-            gifPlayback: true,
-            gifAttribution: 5
-                     }, { quoted: fkon })*/
-
-/*    conn.relayMessage(m.chat, {
-      extendedTextMessage: {
-        text: text,
-        contextInfo: {
-          mentionedJid: [m.sender],
-          externalAdReply: {
-            title: wm,
-            mediaType: 1,
-            previewType: 0,
-            renderLargerThumbnail: true,
-            thumbnailUrl: 'https://pomf2.lain.la/f/w0836qsb.jpg',
-            sourceUrl: sgc,
-          }
-        }, mentions: [m.sender]
-      }
-    }, { quoted: fkon });*/
+    let img = 'https://pomf2.lain.la/f/usrof2b.jpg'
+    await m.react('🤍')
+    await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), fakegif3, null, fake)
+  /*  conn.sendFile(m.chat, "https://pomf2.lain.la/f/tmdqfwwp.jpg", 'menu.jpg', (text.trim()), fakegif3, fake) */
   } catch (e) {
     conn.reply(m.chat, ' error', m)
     throw e
@@ -342,8 +227,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(allmenu|menu|help|\?)$/i
-
+handler.command = /^(allmenu|menu|menú|\?)$/i
 handler.register = true
 handler.exp = 3
 
@@ -375,7 +259,7 @@ function clockStringP(ms) {
 }
 function ucapan() {
     const time = moment.tz('America/Buenos_Aires').format('HH')
-    let res = "¿Aún despiertx?, Duerme mejor. 🌙"
+    let res = "Buenas Noches 🌙"
     if (time >= 5) {
         res = "Buena Madrugada 🌄"
     }
