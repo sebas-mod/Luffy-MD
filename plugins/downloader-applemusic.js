@@ -118,7 +118,7 @@ let text = `*\`【 A P P L E - M U S I C 】\`*
 
 > ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`
             await m.react('✅');
-            await conn.sendFile(m.chat, thumb, `image.jpg`, text, m, null, fake);
+            await conn.sendFile(m.chat, thumb, `img.jpg`, text, m, null, fake);
 // m.reply(`_✧ Enviando  (${artist}/${duration})_\n\n> ${url}`);
       const doc = {
       audio: { url: download },
