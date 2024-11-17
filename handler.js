@@ -107,6 +107,8 @@ export async function handler(chatUpdate) {
                     chat.isBanned = false
                 if (!('welcome' in chat))
                     chat.welcome = false
+                if (!('bienvenida' in chat))
+                    chat.bienvenida = false
                 if (!('autodl' in chat))
                     chat.autodl = false
                 if (!('detect' in chat))
@@ -147,6 +149,7 @@ export async function handler(chatUpdate) {
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
                     welcome: false,
+                    bienvenida: true,
                     autodl: false,
                     detect: false,
                     sWelcome: '',
