@@ -513,7 +513,8 @@ export async function participantsUpdate( { id, participants, action }) {
                     } catch (e) {
                     } finally {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || await Connection.conn.welcome || 'Bienvenido, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
-                            (chat.sBye || this.bye || await Connection.conn.bye || 'Bye bye, @user!')).replace('@user', `${this.getName(user)}`)
+                            (chat.sBye || this.bye || await Connection.conn.bye || 'Bye, @user!')).replace('@user', `@` + user.split('@')[0])
+
                             let skyin = {
 text: text,
 contextInfo: {
