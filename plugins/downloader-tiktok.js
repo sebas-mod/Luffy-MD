@@ -1,13 +1,3 @@
-/* let txt = '';
-txt += `*\`[ TIKTOK DOWNLOAD ]\`*\n\n`;
-txt += `> 🤍 *\`» Título :\`* ${title || '❌'}\n`;
-txt += `> 🤍 *\`» Autor :\`* ${author || '❌'}\n`;
-txt += `> 🤍 *\`» Visitas :\`* ${views || '❌'}\n`;
-txt += `> 🤍 *\`» Likes :\`* ${like || '❌'}\n`; 
-txt += `> 🤍 *\`» Comentarios :\`* ${comment || '❌'}\n`;
-txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
-txt += '> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ\n'; */
-
 import fetch from 'node-fetch'
 import ffmpeg from "fluent-ffmpeg"
 
@@ -53,10 +43,10 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
     }
 };
 
-handler.help = ['tiktok'].map((v) => v + ' <link>')
+handler.help = ['tiktok *<link>*']
+handler.corazones = 3
 handler.tags = ['downloader']
-handler.command = /^t(t|iktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i
-handler.limit = true
+handler.command = /^(tiktok)$/i;
 
 export default handler
 
