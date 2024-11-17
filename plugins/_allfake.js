@@ -1,11 +1,3 @@
-global.group = 'https://chat.whatsapp.com/GqKwwoV2JJaJDP2SL7SddX'
-global.group2 = 'https://chat.whatsapp.com/Fn5Ipyxu6mE6qEQlwWZTwU'
-global.canal = 'https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y'
-global.github = 'https://github.com/Angelito-OFC/GenesisBot-MD' 
-global.instagram = 'https://www.instagram.com/usxr_angelito0' 
-
-
-
 import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
@@ -21,6 +13,7 @@ let imagenes = ["https://pomf2.lain.la/f/41appdgm.jpg",
 "https://pomf2.lain.la/f/5g0urgp.jpg"]
 
 let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
+let redes = [group, group2, github, instagram].getRandom()
     let name = await conn.getName(m.sender)
     let pp = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
     try {
