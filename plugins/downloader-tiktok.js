@@ -1,4 +1,4 @@
-let txt = '';
+/* let txt = '';
 txt += `*\`[ TIKTOK DOWNLOAD ]\`*\n\n`;
 txt += `> 🤍 *\`» Título :\`* ${title || '❌'}\n`;
 txt += `> 🤍 *\`» Autor :\`* ${author || '❌'}\n`;
@@ -6,7 +6,7 @@ txt += `> 🤍 *\`» Visitas :\`* ${views || '❌'}\n`;
 txt += `> 🤍 *\`» Likes :\`* ${like || '❌'}\n`; 
 txt += `> 🤍 *\`» Comentarios :\`* ${comment || '❌'}\n`;
 txt += `> 🤍 *\`» Publicado :\`* ${published || '❌'}\n\n`;
-txt += '> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ\n';
+txt += '> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ\n'; */
 
 import fetch from 'node-fetch'
 import ffmpeg from "fluent-ffmpeg"
