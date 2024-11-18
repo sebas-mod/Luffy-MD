@@ -108,7 +108,7 @@ const appledown = {
 let dataos = await appledown.download(text);
 let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
 
- let text = `*\`【 A P P L E - M U S I C 】\`*
+ const text = `*\`【 A P P L E - M U S I C 】\`*
 
 > *🤍 \`TÍTULO:\`* ${name}
 > *🤍 \`ARTISTAS:\`* ${artists}
