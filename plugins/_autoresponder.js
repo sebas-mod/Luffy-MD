@@ -1,4 +1,4 @@
-/* import axios from 'axios';
+import axios from 'axios';
 import { sticker } from '../lib/sticker.js';
 
 let handler = m => m;
@@ -41,54 +41,4 @@ handler.all = async function (m, { conn }) {
     return true;
 };
 
-export default handler; */
-
-import axios from 'axios';
-import { sticker } from '../lib/sticker.js';
-
-let handler = m => m;
-
-handler.all = async function (m, { conn }) {
-    let chat = global.db.data.chats[m.chat];
-    let prefixRegex = new RegExp('^[' + (opts['prefix'] || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']');
-
-    // Si el bot es mencionado o si se responde a un mensaje del bot
-    if ((m.mentionedJid.includes(this.user.jid) || (m.quoted && m.quoted.sender === this.user.jid)) && m.isGroup && !chat.isBanned) {
-        if (m.text.includes('PIEDRA') || m.text.includes('PAPEL') || m.text.includes('TIJERA') || 
-            m.text.includes('menu') || m.text.includes('estado') || 
-            m.text.includes('bots') || m.text.includes('serbot') || 
-            m.text.includes('jadibot') || m.text.includes('Video') || 
-            m.text.includes('Audio') || m.text.includes('audio')) return !0;
-
-        await this.sendPresenceUpdate('composing', m.chat);
-
-        // Función para interactuar con la API de Ryzendesu sin token
-        async function blackboxQuery(prompt) {
-            try {
-                const response = await axios.post("https://api.ryzendesu.vip/api/ai/blackbox", {
-                    prompt: prompt
-                }, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                return response.data.response; // Ajustado según la respuesta de la API
-            } catch (error) {
-                console.error("Error al interactuar con la API Blackbox:", error);
-                return "Lo siento, hubo un problema al generar la respuesta.";
-            }
-        }
-
-        let query = m.text;
-        let username = `${m.pushName}`;
-        let prompt = `Tomarás el rol de un bot de WhatsApp llamado GenesisBot 🤍 creado por Angel. Tu idioma es español y tu rol es divertido y humorístico. Responde de forma corta, amigable y creativa a lo que se te pregunte.`;
-
-        // Llama a la función para obtener la respuesta
-        let result = await blackboxQuery(`${prompt}\nUsuario: ${query}\nBot:`);
-
-        await this.reply(m.chat, result, m, fake);
-    }
-    return true;
-};
-
-export default handler;
+export default handler; 
