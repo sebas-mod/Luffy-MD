@@ -119,7 +119,7 @@ let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
 > ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`
             await m.react('✅');
            // await conn.sendFile(m.chat, thumb, text, m, null, fake); 
-            await conn.sendFile(m.chat, cover, `image.jpeg`, text, m, null, fake);
+            await conn.sendFile(m.chat, thumb, `image.jpeg`, text, m, null, fake);
             await conn.sendMessage(m.chat, {
               audio: audio,
               mimetype: 'audio/mp4',
