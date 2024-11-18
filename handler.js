@@ -127,6 +127,8 @@ export async function handler(chatUpdate) {
                     chat.antiLink = false
                 if (!('modoadmin' in chat))
                     chat.modoadmin = false
+                if (!('antiviewonce' in chat))
+                    chat.antiviewonce = false
                 if (!('viewonce' in chat))
                     chat.viewonce = false
                 if (!('antiToxic' in chat))
@@ -161,6 +163,7 @@ export async function handler(chatUpdate) {
                     delete: false,
                     antiLink: false,
                     modoadmin: false,
+                    antiviewonce: false,
                     viewonce: false,
                     simi: false,
                     autogpt: false,
