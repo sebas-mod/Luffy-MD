@@ -14,7 +14,7 @@ let handler = async (m, { args }) => {
    if (!Number(args[0])) return m.reply('✧ La cantidad deve ser un Numero.')
    let count = parseInt(args[0])
    if (!user.corazones) return m.reply('No tienes *corazones* en la Cartera.')
-   if (user.corazones < count) return m.reply(`Solo tienes *${user.limit} corazones* en la Cartera.`)
+   if (user.corazones < count) return m.reply(`Solo tienes *${user.corazones} corazones* en la Cartera.`)
    user.corazones -= count * 1
    user.bank += count * 1
    await m.reply(`Depositaste *${count} corazones* al Banco.`)
