@@ -118,7 +118,7 @@ let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
 
 > ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`
             await m.react('✅');
-            await conn.sendFile(m.chat, thumb, `imagen.jpg`, text, m, null, fake); 
+            await conn.sendFile(m.chat, thumb, text, m, null, fake); 
 
 // m.reply(`_✧ Enviando  (${artist}/${duration})_\n\n> ${url}`);
       const doc = {
