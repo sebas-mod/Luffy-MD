@@ -4,7 +4,7 @@
 ᘎ https://whatsapp.com/channel/0029Vai9MMj5vKABWrYzIJ2Z
 */
 
-const nomor = [{ name: "Microsoft Copilot", jid: "18772241042@s.whatsapp.net" }]
+import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args }) => {
   let text
