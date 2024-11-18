@@ -5,8 +5,8 @@ const cooldown = 86400000
 let handler = async (m,{ conn} ) => {
   let user = global.db.data.users[m.sender]
 
-  if (user.role === 'Free user' && user.limit >= 7500) {
-    conn.reply(m.chat, '✧ Los usuarios normales obtendran 7500 Eris', m)
+  if (user.role === 'Free user' && user.corazones >= 7500) {
+    conn.reply(m.chat, '✧ Los usuarios normales obtendran 7500 corazones', m)
     return
   }
 
@@ -22,7 +22,7 @@ let handler = async (m,{ conn} ) => {
 }
 handler.help = ['claimeris']
 handler.tags = ['main']
-handler.command = /^(claimeris)$/i
+handler.command = /^(claim)$/i
 
 handler.cooldown = cooldown
 handler.disable = false
