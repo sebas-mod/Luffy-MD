@@ -55,7 +55,7 @@ export async function handler(chatUpdate) {
         if (!m)
             return
         m.exp = 0
-        m.limit = false
+        m.corazones = false
         try {
             // TODO: use loop to insert data instead of this
             let user = global.db.data.users[m.sender]
@@ -64,8 +64,8 @@ export async function handler(chatUpdate) {
             if (user) {
                 if (!isNumber(user.exp))
                     user.exp = 0
-                if (!isNumber(user.limit))
-                    user.limit = 10
+                if (!isNumber(user.corazones))
+                    user.corazones = 10
                 if (!isNumber(user.afk))
                     user.afk = -1
                 if (!('afkReason' in user))
@@ -83,7 +83,7 @@ export async function handler(chatUpdate) {
             } else
                 global.db.data.users[m.sender] = {
                     exp: 0,
-                    limit: 10,
+                    corazones: 10,
                     lastclaim: 0,
                     registered: false,
                     name: m.name,
@@ -375,8 +375,8 @@ export async function handler(chatUpdate) {
                     m.reply('-_-') // Hehehe
                 else
                     m.exp += xp
-                if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    this.reply(m.chat, `Sus eris se acabaron, usa *${usedPrefix}claimeris* para su recopensa diaria\n\no\nHabla con mi creador para obtener premium *${usedPrefix}owner*`, m)
+                if (!isPrems && plugin.corazones && global.db.data.users[m.sender].limit < plugin.corazones * 1) {
+                    this.reply(m.chat, `Sus corazones se acabaron, usa *${usedPrefix}claim* para su recopensa diaria\n\no\nHabla con mi creador para obtener premium *${usedPrefix}owner*`, m, null, rcanal)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
@@ -409,7 +409,7 @@ export async function handler(chatUpdate) {
                 try {
                     await plugin.call(this, m, extra)
                     if (!isPrems)
-                        m.limit = m.limit || plugin.limit || false
+                        m.corazones = m.corazones || plugin.corazones || false
                 } catch (e) {
                     // Error occured
                     m.error = e
@@ -435,8 +435,8 @@ export async function handler(chatUpdate) {
                             console.error(e)
                         }
                     }
-                    if (m.limit)
-                        m.reply(+m.limit + ' Eris usado ✧ ')
+                    if (m.corazones)
+                        m.reply(+m.corazones + ' corazon usado ✧ ')
                 }
                 break
             }
@@ -454,7 +454,7 @@ export async function handler(chatUpdate) {
         if (m) {
             if (m.sender && (user = global.db.data.users[m.sender])) {
                 user.exp += m.exp
-                user.limit -= m.limit * 1
+                user.corazones -= m.corazones * 1
             }
             let stat
             if (m.plugin) {
