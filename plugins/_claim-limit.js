@@ -10,7 +10,7 @@ let handler = async (m,{ conn} ) => {
     return
   }
 
-  if (new Date - user.lastclaim < cooldown) throw m.reply(`✧ Ya reclamaste los eris diarios, regresa *${((user.lastclaim + cooldown) - new Date()).toTimeString()}*`);
+  if (new Date - user.lastclaim < cooldown) throw m.reply(`✧ Ya reclamaste los corazones diarios, regresa *${((user.lastclaim + cooldown) - new Date()).toTimeString()}*`);
   let text = ''
   for (let reward of Object.keys(rewards)) {
     if (!(reward in user)) continue
