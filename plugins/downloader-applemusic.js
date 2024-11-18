@@ -120,7 +120,7 @@ let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
             await m.react('✅');
            // await conn.sendFile(m.chat, thumb, text, m, null, fake);
  m.reply(`${text}`);
-     /* const doc = {
+     const doc = {
       audio: { url: download },
       mimetype: 'audio/mp4',
       fileName: `${name}.mp3`,
@@ -135,7 +135,7 @@ let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
         }
       }
     };
-    await conn.sendMessage(m.chat, doc, { quoted: m }); */
+    await conn.sendMessage(m.chat, doc, { quoted: m });
     
 }
 handler.help = ['applemusic'];
