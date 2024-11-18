@@ -22,6 +22,6 @@ let handler = async (m, { args }) => {
 
 handler.help = ['depositar']
 handler.tags = ['rpg']
-handler.command = ['deposit', 'depositar', 'dep', 'd']
+handler.command = ['deposit', 'depositar', 'dep']
 handler.register = true 
 export default handler 
