@@ -20,9 +20,9 @@ let handler = async (m,{ conn} ) => {
   conn.reply(m.chat, text.trim(), m)
   user.lastclaim = new Date * 1
 }
-handler.help = ['claimeris']
+handler.help = ['claimcorazones']
 handler.tags = ['main']
-handler.command = /^(claim)$/i
+handler.command = /^(claimcorazones)$/i
 
 handler.cooldown = cooldown
 handler.disable = false
