@@ -5,14 +5,14 @@ let handler = async (m, { conn, command, args }) => {
   count = Math.max(1, count)
   if (global.db.data.users[m.sender].exp >= xpperlimit * count) {
     global.db.data.users[m.sender].exp -= xpperlimit * count
-    global.db.data.users[m.sender].limit += count
+    global.db.data.users[m.sender].corazones += count
     conn.reply(m.chat, `╭────═[ *R P G  -  S H O P* ]═─────⋆
 │╭───────────────···
-││✧ *Compra* : + ${count} ❇️ Eris 
+││✧ *Compra* : + ${count} 🤍 corazones
 ││✧ *Costo* : -${xpperlimit * count} 💫 XP
 │╰────────────────···
 ╰───────────═┅═──────────`, m, rcanal)
-  } else conn.reply(m.chat, `✧ Lo siento, no tienes suficientes *⭐ XP* para comprar *${count} ❇️ Eris.*`, m, rcanal)
+  } else conn.reply(m.chat, `✧ Lo siento, no tienes suficientes *⭐ XP* para comprar *${count} 🤍 corazones.*`, m, rcanal)
 }
 handler.help = ['buycoins', 'buyall']
 handler.tags = ['rpg']
