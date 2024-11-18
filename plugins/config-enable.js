@@ -37,7 +37,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
           throw false
         }
       } else if (!isAdmin) {
-        global.dfail('admin', m, conn)
+        global.dfail('rowner', m, conn)
         throw false
       }
       chat.detect = isEnable
@@ -107,6 +107,14 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       }
       chat.antiLink = isEnable
       break
+case 'modoadmin': case 'soloadmin': case 'modeadmin':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.modoadmin = isEnable          
+break    
     case 'antisticker':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
@@ -256,7 +264,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     case 'menu':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
+          global.dfail('rowner', m, conn)
           throw false
         }
       }
