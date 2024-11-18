@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   } catch (e) {
 
   } finally {
-    let { name, limit, exp, lastclaim, registered, regTime, age, level, role } = global.db.data.users[who]
+    let { name, corazones, exp, lastclaim, registered, regTime, age, level, role } = global.db.data.users[who]
     let { min, xp, max } = xpRange(level, global.multiplier)
     let username = conn.getName(who)
     let math = max - xp
@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix }) => {
    • *Edad:* ${registered ? age : ''}
    • *Xp:* ${exp} (${exp - min} / ${xp})
    • *Rol:* ${role}
-   • *Eris:* ${limit}
+   • *Eris:* ${corazones}
    • *Estado:* ${registered ? 'Si (' + new Date(regTime) + ')': 'No'}
    • *Premium:* ${prems}
 `.trim()
