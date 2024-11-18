@@ -380,7 +380,7 @@ export async function handler(chatUpdate) {
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.reply(m.chat, `✧ Necesitas estar en el nivel ${plugin.level} para usar este comando.\n*✧ Su nivel actualmente:* ${_user.level} 📊`, m)
+                    this.reply(m.chat, `✧ Necesitas estar en el nivel ${plugin.level} para usar este comando.\n*✧ Su nivel actualmente:* ${_user.level} 📊`, m, null, rcanal)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -436,7 +436,8 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.corazones)
-                        m.reply(+m.corazones + ' corazon usado ✧ ')
+                        conn.reply(m.chat, `Utilizaste *${+m.corazones}* 🤍`, m, fake)
+                      //  m.reply(+m.corazones + ' corazon usado ✧ ')
                 }
                 break
             }
