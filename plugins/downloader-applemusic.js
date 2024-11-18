@@ -118,18 +118,8 @@ let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
 
 > ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`
             await m.react('✅');
-           // await conn.sendFile(m.chat, thumb, text, m, null, fake); 
-            await conn.sendFile(m.chat, thumb, `image.jpeg`, text, m, null, fake);
-            await conn.sendMessage(m.chat, {
-              audio: audio,
-              mimetype: 'audio/mp4',
-              fileName: `${name}.mp3`,
-              caption: ` `
-            }, { quoted: m });
-          }
-        }
-
-// m.reply(`_✧ Enviando  (${artist}/${duration})_\n\n> ${url}`);
+           // await conn.sendFile(m.chat, thumb, text, m, null, fake);
+ m.reply(`${text}`);
      /* const doc = {
       audio: { url: download },
       mimetype: 'audio/mp4',
