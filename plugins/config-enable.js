@@ -297,6 +297,7 @@ break
 | antisticker
 | autobio
 | autobio
+| modoadmin
 | autogpt
 | autolevelup
 | autoread
