@@ -62,22 +62,19 @@ handler.all = async function (m, { conn }) {
 
         await this.sendPresenceUpdate('composing', m.chat);
 
-        // Nueva función para interactuar con Llama 3.2
-        async function llamaQuery(prompt) {
+        // Función para interactuar con la API de Ryzendesu sin token
+        async function blackboxQuery(prompt) {
             try {
-                const response = await axios.post("https://tu-endpoint-llama3.2.com/api/generate", {
-                    prompt: prompt,
-                    max_tokens: 200, // Ajusta según tu necesidad
-                    temperature: 0.7 // Control de creatividad
+                const response = await axios.post("https://api.ryzendesu.vip/api/ai/blackbox", {
+                    prompt: prompt
                 }, {
                     headers: {
-                        'Authorization': 'Bearer TU_TOKEN_DE_ACCESO', // Si aplica
                         'Content-Type': 'application/json'
                     }
                 });
-                return response.data.text; // Ajusta según la respuesta de la API
+                return response.data.response; // Ajustado según la respuesta de la API
             } catch (error) {
-                console.error("Error al interactuar con Llama 3.2:", error);
+                console.error("Error al interactuar con la API Blackbox:", error);
                 return "Lo siento, hubo un problema al generar la respuesta.";
             }
         }
@@ -87,7 +84,7 @@ handler.all = async function (m, { conn }) {
         let prompt = `Tomarás el rol de un bot de WhatsApp llamado GenesisBot 🤍 creado por Angel. Tu idioma es español y tu rol es divertido y humorístico. Responde de forma corta, amigable y creativa a lo que se te pregunte.`;
 
         // Llama a la función para obtener la respuesta
-        let result = await llamaQuery(`${prompt}\nUsuario: ${query}\nBot:`);
+        let result = await blackboxQuery(`${prompt}\nUsuario: ${query}\nBot:`);
 
         await this.reply(m.chat, result, m, fake);
     }
@@ -95,4 +92,3 @@ handler.all = async function (m, { conn }) {
 };
 
 export default handler;
-
