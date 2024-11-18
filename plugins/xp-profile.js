@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix }) => {
    • *Edad:* ${registered ? age : ''}
    • *Xp:* ${exp} (${exp - min} / ${xp})
    • *Rol:* ${role}
-   • *Eris:* ${corazones}
+   • *Corazones:* ${corazones}
    • *Estado:* ${registered ? 'Si (' + new Date(regTime) + ')': 'No'}
    • *Premium:* ${prems}
 `.trim()
