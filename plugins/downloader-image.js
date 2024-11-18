@@ -18,7 +18,7 @@ https://whatsapp.com/channel/0029Vanjyqb2f3ERifCpGT0W
 
 //*`[ IMAGEN SEARCH - CARRUSEL ]`*
 import axios from 'axios';
-const { proto, generateWAMessageFromContent, generateWAMessageContent } = (await import('@whiskeysockets/baileys')).default
+const { proto, generateWAMessageFromContent, generateWAMessageContent } = (await import('@adiwajshing/baileys')).default
 
 let handler = async (m, { conn, text }) => {
 if (!text) return m.reply('Ingresa el texto de lo que quieres buscar');
