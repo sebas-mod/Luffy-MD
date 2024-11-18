@@ -119,7 +119,7 @@ let { name, albumname, artist, url, thumb, duration, token, download } = dataos;
 > ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`
             await m.react('✅');
            // await conn.sendFile(m.chat, thumb, text, m, null, fake);
- m.reply(`${text}`);
+ m.reply(`*\`【 A P P L E - M U S I C 】\`*\n\n> *🤍 \`TÍTULO:\`* ${name}\n> *🤍 \`ARTISTAS:\`* ${artists}\n> *🤍 \`ALBUM:\`* ${albumname}\n> *🤍 \`DURACIÓN:\`* ${duration}\n> *🤍 \`URL:\`* ${url}\n\n> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`);
      const doc = {
       audio: { url: download },
       mimetype: 'audio/mp4',
