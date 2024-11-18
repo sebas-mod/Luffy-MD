@@ -329,6 +329,6 @@ ${usedPrefix}off welcome
 
 handler.help = ['en', 'dis'].map(v => v + 'able <opción>')
 handler.tags = ['group', 'owner']
-handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
+handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i;
 
 export default handler
