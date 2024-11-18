@@ -1,48 +1,18 @@
+import fetch from 'node-fetch'
 
-/**
-© ZENITH
-ᘎ https://whatsapp.com/channel/0029Vai9MMj5vKABWrYzIJ2Z
-*/
+let handler = async (m, { conn, text }) => {
+if (!text) return m.reply('Ingresa un texto')
 
-import fetch from 'node-fetch';
+try {
+let prompt = 'Eres HasumiBot, Tu Creador Es JTXS'
+let api = await fetch(`https://api.ryzendesu.vip/api/ai/llama?text=${text}&prompt=${prompt}&models=llama-3.1-70b-instruct`)//Modelo 2 : llama-3.2-11b-vision-instruct
+let json = await api.json()
+let { result } = json
+m.reply(result.response)
+} catch (error) {
+console.error(error)
+}}
 
-let handler = async (m, { conn, args }) => {
-  let text
-  if (args.length >= 1) {
-    text = args.join(" ")
-  } else if (m.quoted && m.quoted.text) {
-    text = m.quoted.text
-  } else throw "Input teks diperlukan."
-  let q = m.quoted ? m.quoted : m
-  let mime = (q.msg || q).mimetype || ""
-  await m.reply(wait)
-  let media = null
-  if (/image\/(png|jpe?g)/.test(mime)) {
-    media = await q.download()
-  } else if (mime) {
-    return await m.reply("Format gambar tidak didukung.")
-  }
-  if (media) {
-    await conn.sendMessage(nomor[0].jid, { image: media, caption: text }, { quoted: m })
-  } else {
-    await conn.sendMessage(nomor[0].jid, { text: text }, { quoted: m })
-  }
-  let zenith = () => {
-    return new Promise((resolve) => {
-      conn.ev.on("messages.upsert", ({ messages }) => {
-        let msg = messages[0]
-        if (msg.key.remoteJid === nomor[0].jid && msg.message?.conversation) {
-          resolve(msg.message.conversation)
-        }
-      })
-    })
-  }
-  let ans = await zenith()
-  await m.reply(ans)
-}
-handler.help = ["chatbot"]
-handler.tags = ["ai"]
-handler.command = ["chatbot"]
-handler.private = false
+handler.command = ['llamaAi']
 
 export default handler
