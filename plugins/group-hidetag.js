@@ -28,7 +28,7 @@ conn.sendMessage(m.chat, {
 mentionedJid: mem, 
 		groupMentions: [
 			{
-				groupSubject: `everyone - [ *${text}* ] ||`,
+				groupSubject: `- [ *${text}* ] ||`,
 				groupJid: m.chat,
 			},
 		],
@@ -38,7 +38,7 @@ mentionedJid: mem,
 
 handler.help = ['hidetag']
 handler.tags = ['group']
-handler.command = /^(hidetag|notify|everyone)$/i
+handler.command = /^(hidetag|notify|n)$/i
 
 handler.group = true
 handler.admin = true
