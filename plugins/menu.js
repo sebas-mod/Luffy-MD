@@ -25,13 +25,12 @@ let estilo = (text, style = 1) => {
   return output.join('');
 };
 const defaultMenu = {
-  before: `*Hola*\`%name\` *Soy Genesis ${ucapan()}*
+  before: `*Hola*\`%name\` *Soy LuffyBoT-MD ${ucapan()}*
 
 ➫ _\`ᴀᴄᴛɪᴠᴏ\`_ :: _%muptime_
 ➫ _\`ᴜꜱᴜᴀʀɪᴏꜱ\`_ :: _%rtotalreg de %totalreg_
 ➫ _\`ᴄᴏʀᴀᴢᴏɴᴇꜱ\`_ :: _%corazones_
 ➫ _\`ᴘʀᴇꜰɪᴊᴏ\`_ :: _< . >_
-➫ _\`ᴘᴀᴛʀᴏᴄɪɴᴀᴅᴏʀ\`_ :: _Tk-Host_
 
 ▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬
  %readmore
