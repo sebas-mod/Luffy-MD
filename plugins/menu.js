@@ -35,10 +35,10 @@ const defaultMenu = {
 ▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬
  %readmore
   `.trimStart(),
-  header: '╭─(❀)❝┊ *_`%category`_* ┊❝(❀)',
-  body: '┊➫ %cmd\n',
-  footer: '╰───────────── –\n',
-  after: `> ©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`,
+  header: '𖤐⁩᭄ꦿ `%category`ᬏ᭄ ',
+  body: '︴🌹፝⃟༘┼ ᜴⃕ %cmd\n',
+  footer: '╰───────────── ৢۜ͜͡\n',
+  after: `> ©️ p͢o͢w͢e͢r͢ b͢y͢ g͢a͢l͢a͢x͢y͢ t͢e͢a͢m͢`,
   }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
 
@@ -47,18 +47,18 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
   }
 
   let tags = {
-    'ai': 'ꜰᴜɴᴄɪᴏɴᴇꜱ ᴀɪ',
+    'main': 'ᴘʀɪɴᴄɪᴘᴀʟ',
     'search': 'ʙᴜꜱQᴜᴇᴅᴀ',
+    'group': 'ɢʀᴜᴘᴏꜱ',
     'dl': 'ᴅᴇꜱᴄᴀʀɢᴀꜱ',
     'tools': 'ʜᴇʀʀᴀᴍɪᴇɴᴛᴀꜱ',
-    'main': 'ᴘʀɪɴᴄɪᴘᴀʟ',
+     'ai': 'ꜰᴜɴᴄɪᴏɴᴇꜱ ᴀɪ',
     'anonymous': 'ᴄʜᴀᴛ ᴀɴᴏɴɪᴍᴏ',
     'confesar': 'ᴄᴏɴꜰᴇᴄɪᴏɴᴇꜱ',
     'rpg': 'ʀᴏʟᴇᴘʟᴀʏ',
     'internet': 'ɪɴᴛᴇʀɴᴇᴛ',
     'anime': 'ᴀɴɪᴍᴇ',
     'sticker': 'ꜱᴛɪᴄᴋᴇʀ',
-    'group': 'ɢʀᴜᴘᴏꜱ',
     'owner': 'ᴏᴡɴᴇʀ',
   }
 
