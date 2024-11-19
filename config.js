@@ -7,11 +7,11 @@ import PhoneNumber from 'awesome-phonenumber'
 import fs from 'fs'
 
 /*============= MAIN INFO =============*/
-global.owner = [['59168683798', 'AngelitoDev', true]]
+global.owner = [['5491140951814', 'creador', true]]
 global.mods = []
 global.prems = []
-global.nomorbot = '5493816785382'
-global.nomorown = '5493865860050'
+global.nomorbot = '5491140951814'
+global.nomorown = '5491140951814'
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
 global.packname = ' ❜︧༷︧➭ િ𝐆єห͓૯ઽíន λł ી▵°⬸'
