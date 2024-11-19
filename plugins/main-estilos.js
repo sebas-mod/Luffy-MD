@@ -288,7 +288,7 @@ H⃟༻ I⃟༻ J⃟༻K⃟༻ L⃟༻M⃟༻ N⃟༻O⃟༻ P⃟༻ Q⃟༻R⃟
     contextInfo: {externalAdReply: {mediaUrl: null, mediaType: 1, description: null,
       title: '𝙸𝙽𝙵𝙾  𝙱𝙾𝚃',
       body: 'ᴛʜᴇ tanjiro ﹣ ʙᴏᴛ',
-      previewType: 0, thumbnail: fs.readFileSync('./Menu2.jpg'),
+     // previewType: 0, thumbnail: fs.readFileSync('./Menu1.jpg'),
       sourceUrl: ``}}});
 };
 handler.help = ['diseños'];
