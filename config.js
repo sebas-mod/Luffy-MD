@@ -31,18 +31,18 @@ global.listo = '*Aqui tiene ฅ^•ﻌ•^ฅ*'
 global.vs = '2.0.0'
 global.namechannel = 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈ - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍'
 global.stickauth = `© 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈|𝐒𝐞𝐛𝐚𝐬-𝐌𝐃`
-global.dis = ':⁖֟⊱┈֟፝❥'
+global.dis = '🌹⋆⃟ۣۜ᭪'
 
 //• ↳ ◜𝑰𝑴𝑨́𝑮𝑬𝑵𝑬𝑺◞ • 🌇
 global.logo7 = fs.readFileSync('./thumbnail.jpg')
 
 //• ↳ ◜𝑳𝑰𝑵𝑲𝑺◞ • 🌿
-global.group = 'https://chat.whatsapp.com/GqKwwoV2JJaJDP2SL7SddX'
-global.group2 = 'https://chat.whatsapp.com/Fn5Ipyxu6mE6qEQlwWZTwU'
-global.canal = 'https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y'
-global.github = 'https://github.com/Angelito-OFC/GenesisBot-MD' 
-global.instagram = 'https://www.instagram.com/usxr_angelito0' 
-global.whatsApp = 'https://wa.me/59168683798'
+global.group = 'https://chat.whatsapp.com/DJkL87Jl3qFCRCUNt19UlO'
+global.group2 = 'https://chat.whatsapp.com/DJkL87Jl3qFCRCUNt19UlO'
+global.canal = 'https://whatsapp.com/channel/0029VafHsEoBqbr3qlW1aX0U'
+global.github = 'https://github.com/sebas-mod/Luffy-MD' 
+global.instagram = 'www.instagram.com/luis.sebastian.19' 
+global.whatsApp = 'https://wa.me/5491140951814'
 
 //• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 🪩
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', orderTitle: 'packname', thumbnail: logo7, sellerJid: '0@s.whatsapp.net'}}}
