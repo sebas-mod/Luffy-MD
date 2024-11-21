@@ -26,21 +26,21 @@ let estilo = (text, style = 1) => {
 };
 const defaultMenu = {
   before: `*Hola*\`%name\` *Soy LuffyBoT-MD ${ucapan()}*
-✯︿︿︿︿︿╭{ LuffyBot-MD }╮︿︿︿︿︿✯
+✯︿︿︿︿╭{ LuffyBot-MD }╮︿︿︿︿✯
 〈│• _\`ᴀᴄᴛɪᴠᴏ\`_ :: _%muptime_
 〈│• _\`ᴜꜱᴜᴀʀɪᴏꜱ\`_ :: _%rtotalreg de %totalreg_
 〈│• _\`ᴄᴏʀᴀᴢᴏɴᴇꜱ\`_ :: _%corazones_
 〈│• _\`ᴘʀᴇꜰɪᴊᴏ\`_ :: _< . >_
-﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀✯
+﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀﹀✯
 
 
-●▬▬▬▬▬▬▬▬▬▬▬▬୧✬୨▬▬▬▬▬▬▬▬▬▬▬●
+●▬▬▬▬▬▬▬▬▬▬୧✬୨▬▬▬▬▬▬▬▬▬●
 
  %readmore
   `.trimStart(),                 
   header: '╭·:*¨☆%category☆¨*:·.',
   body: '│✧%cmd\n',
-  footer: '╰▬▬▬▬▬▬▬▬▬▬▬▬୧✬୨▬▬▬▬▬▬▬▬▬▬▬●\n',
+  footer: '╰▬▬▬▬▬▬▬▬▬▬୧✬୨▬▬▬▬▬▬▬▬▬●\n',
   after: `> ©️ p͢o͢w͢e͢r͢ b͢y͢ g͢a͢l͢a͢x͢y͢ t͢e͢a͢m͢`,
   }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
