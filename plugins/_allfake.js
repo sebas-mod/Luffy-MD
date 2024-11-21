@@ -40,14 +40,14 @@ global.rcanal = {
  contextInfo: {
      	isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363220939514640@newsletter",
+      newsletterJid: "120363299030870235@newsletter",
       serverMessageId: 100,
-      newsletterName: '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑰𝑨 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
+      newsletterName: '𝙇𝙪𝙛𝙛𝙮𝘽𝙤𝙩-𝙈𝘿 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
    }, 
    externalAdReply: {
     showAdAttribution: true, 
     title: titulowm, 
-    body: "🤍 ¡Génesis La Mejor!", 
+    body: "hola nakamas LuffyBot-MD 🏴‍☠️", 
     mediaUrl: redes, 
     description: null, 
     previewType: "PHOTO", 
@@ -64,7 +64,7 @@ global.fake = {
     contextInfo: {
     	isForwarded: true,
     forwardedNewsletterMessageInfo: {
-      newsletterJid: "120363220939514640@newsletter",
+      newsletterJid: "120363299030870235@newsletter",
       serverMessageId: 100,
       newsletterName: '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑰𝑨 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
     },
@@ -117,7 +117,7 @@ participant : '0@s.whatsapp.net'
 },
 message: {
 newsletterAdminInviteMessage: {
-newsletterJid: '120363210705976689@newsletter',
+newsletterJid: '120363299030870235@newsletter',
     newsletterName: '',
     caption: `${wm} | 2022 - 2025`
 }}}
