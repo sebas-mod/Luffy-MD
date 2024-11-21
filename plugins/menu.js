@@ -38,9 +38,9 @@ const defaultMenu = {
 
  %readmore
   `.trimStart(),                 
-  header: '╭·:*¨☆%category☆¨*:·.',
+  header: '╭─·:*¨☆%category☆¨*:·.─',
   body: '│✧%cmd\n',
-  footer: '╰▬▬▬▬▬▬୧✬୨▬▬▬▬▬●\n',
+  footer: '╰─ ─ ─ ─ ─୧✬୨─ ─ ─ ─ ─ ●\n',           
   after: `> ©️ p͢o͢w͢e͢r͢ b͢y͢ g͢a͢l͢a͢x͢y͢ t͢e͢a͢m͢`,
   }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
