@@ -28,7 +28,7 @@ conn.sendMessage(m.chat, {
 mentionedJid: mem, 
 		groupMentions: [
 			{
-				groupSubject: `- [ *${text}* ] ||`,
+				groupSubject: `-LuffyBot-Dios[ *${text}* ]`,
 				groupJid: m.chat,
 			},
 		],
