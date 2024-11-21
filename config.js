@@ -14,23 +14,23 @@ global.nomorbot = '5491140951814'
 global.nomorown = '5491140951814'
 
 //• ↳ ◜𝑴𝑨𝑹𝑪𝑨𝑺 𝑫𝑬 𝑨𝑮𝑼𝑨◞ • 💌
-global.packname = ' ❜︧༷︧➭ િ𝐆єห͓૯ઽíន λł ી▵°⬸'
-global.author = '@usxr_angelito0'
-global.namebot = 'Genesis Ai'
+global.packname = ' 𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃'
+global.author = '@sebas-MD'
+global.namebot = 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈'
 global.wait = '*Aɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ ฅ^•ﻌ•^ฅ*'
-global.wm = '▸ ⃦Ⴚɛɳєડｪꪳ͢ئ ﾑ፤ ꩍꩍꢀ 𓏲᭔۫֟፝֯᷼๑꙰୭᳟⁣᭄'
+global.wm = '▸ ⃦L̈üf̈f̈ÿB̈öẗ-̈M̈D̈ ꩍꩍꢀ 𓏲᭔۫֟፝֯᷼๑꙰୭᳟⁣᭄'
 global.stickpack = `©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ`
 global.titulowm = '-❀ᩙ̈͟༚̮ ⡞᪲=͟͟͞🄶𝚎᪶۫۫𝚗᪶۫۫𝚎᪶۫۫𝚜᪶۫۫𝚒᪶۫۫𝚜᪶۫ 𝚊᪶۫𝚒᪶۫͜ ≼᳞ׄ ᵎ ˚꙳꤬ꨪ'
 global.titulowm2 = '.‧·ீ੭ ¡ ᗃᮢ፝֟͡Gᴇɴᴇsɪs B۵ᴛ ʟᴀ ᴍᴇᴊ꧔ʀ !˚̩̩̥͙°̩̥༅˚'
-global.igfg = '@usxr_angelito0'
-global.botname = '  ᩠ ꣣ʹ͚〃Ǥ℮ภэડเธ λ𝕚  ·ꗏฺ̇·.•۟'
-global.dev = '_© Reserved | Genesis AI *2024*_'
+global.igfg = '@sebas-MD'
+global.botname = '  ᩠ ꣣ʹ͚〃L̈üf̈f̈ÿB̈öẗ-̈M̈D̈ ·ꗏฺ̇·.•۟'
+global.dev = '_© Reserved | L̈üf̈f̈ÿB̈öẗ-̈M̈D̈ *2024*_'
 global.titu = '©️ ρσωε૨ ɓყ ɠαℓαאყ ƭεαɱ'
-global.textbot = 'ɢᴇɴᴇꜱɪꜱʙᴏᴛ x ᴀɴɢᴇʟ-ᴏꜰᴄ 🤍'
+global.textbot = 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈|𝐒𝐞𝐛𝐚𝐬-𝐌𝐃'
 global.listo = '*Aqui tiene ฅ^•ﻌ•^ฅ*'
 global.vs = '2.0.0'
-global.namechannel = '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑩𝒐𝒕 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍'
-global.stickauth = `© Genesis Ai By Angelito-OFC`
+global.namechannel = 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈ - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍'
+global.stickauth = `© 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈|𝐒𝐞𝐛𝐚𝐬-𝐌𝐃`
 global.dis = ':⁖֟⊱┈֟፝❥'
 
 //• ↳ ◜𝑰𝑴𝑨́𝑮𝑬𝑵𝑬𝑺◞ • 🌇
@@ -45,15 +45,15 @@ global.instagram = 'https://www.instagram.com/usxr_angelito0'
 global.whatsApp = 'https://wa.me/59168683798'
 
 //• ↳ ◜𝑭𝑨𝑲𝑬 𝑬𝑺𝑻𝑰𝑳𝑶◞ • 🪩
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '𝗚𝗲𝗻𝗲𝘀𝗶𝘀𝗕𝗼𝘁-𝗠𝗗', orderTitle: 'packname', thumbnail: logo7, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', orderTitle: 'packname', thumbnail: logo7, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fakegif2 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'GenesisBot-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖𖥔.𝐁𝐢𝐞𝐧𝐯𝐞𝐧𝐢𝐝𝐨❞ ꔷ──᜔◇⃟̣̣⃕✨', jpegThumbnail: logo7 }}};
+global.fakegif2 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', jpegThumbnail: logo7 }}};
 
-global.fakegif3 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'GenesisBot-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖ɢ ᴇ ɴ ᴇ ꜱ ɪ ꜱ ♡', jpegThumbnail: logo7 }}};
+global.fakegif3 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', jpegThumbnail: logo7 }}};
 
-global.fakegif4 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: 'GenesisBot-MD', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𖠵⃕⁖𝐒𝐭𝐢𝐜𝐤𝐞𝐫 (^_^♪) 💥', jpegThumbnail: logo7 }}};
+global.fakegif4 = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { videoMessage: { title: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', h: `Hmm`, seconds: '99999', gifPlayback: true, caption: '⚘݄𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃 (^_^♪) 💥', jpegThumbnail: logo7 }}};
 
-global.estilox = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: 'GenesisBot-MD', orderTitle: 'packname', thumbnail: logo7, sellerJid: '0@s.whatsapp.net'}}}
+global.estilox = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '𝐋𝐮𝐟𝐟𝐲𝐁𝐨𝐭-𝐌𝐃', orderTitle: 'packname', thumbnail: logo7, sellerJid: '0@s.whatsapp.net'}}}
 
 //• ↳ ◜𝑻𝑰𝑬𝑴𝑷𝑶◞ • 🕒
 global.d = new Date(new Date + 3600000);
