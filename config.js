@@ -148,7 +148,7 @@ global.fla = [
 ]
 global.hwaifu = ['https://telegra.ph/file/a7ac2b46f82ef7ea083f9.jpg']
 global.thumblvlup = [
-  'https://pomf2.lain.la/f/ob90ku8j.jpg'
+  'https://pomf2.lain.la/f/7lfyrrvo.jpg'
 ]
 
 let file = fileURLToPath(import.meta.url)
