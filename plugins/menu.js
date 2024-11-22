@@ -38,7 +38,7 @@ const defaultMenu = {
 
  %readmore
   `.trimStart(),                 
-  header: '╭─·:*¨☆_%category_☆¨*:·.─',
+  header: '╭─·:*¨☆_%category_☆¨*:·.',
   body: '│✧%cmd\n',
   footer: '╰─ ─ ─ ─ ─୧✬୨─ ─ ─ ─ ─ ●\n',           
   after: `> ©️ p͢o͢w͢e͢r͢ b͢y͢ g͢a͢l͢a͢x͢y͢ t͢e͢a͢m͢`,
