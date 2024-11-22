@@ -4,13 +4,13 @@ import moment from 'moment-timezone'
 
 let handler = m => m
 handler.all = async function (m) {
-let imagenes = ["https://pomf2.lain.la/f/41appdgm.jpg",
-"https://pomf2.lain.la/f/r937l3ev.jpg",
-"https://pomf2.lain.la/f/20hjv20z.jpg",
-"https://pomf2.lain.la/f/ktvr0eqw.jpg",
-"https://pomf2.lain.la/f/s8zmmy6i.jpg",
-"https://pomf2.lain.la/f/352qn0ng.jpg",
-"https://pomf2.lain.la/f/5g0urgp.jpg"]
+let imagenes = ["https://pomf2.lain.la/f/a4ylaghy.jpg",
+"https://pomf2.lain.la/f/erf4t2ak.jpg",
+"https://pomf2.lain.la/f/5zjr8ofd.jpg",
+"https://pomf2.lain.la/f/s0yfn17g.jpg",
+"https://pomf2.lain.la/f/bp8a1cu8.jpg",
+"https://pomf2.lain.la/f/46pe686.jpg",
+"https://pomf2.lain.la/f/ghfs8sp3.jpg"]
 
     let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
     let redes = [canal, github, instagram].getRandom()
