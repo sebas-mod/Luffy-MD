@@ -217,7 +217,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
-    let img = 'https://pomf2.lain.la/f/bp8a1cu8.jpg'
+    let img = 'https://pomf2.lain.la/f/7lfyrrvo.jpg'
     await m.react('☠')
     await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), fakegif3, null, fake)
   /*  conn.sendFile(m.chat, "https://pomf2.lain.la/f/tmdqfwwp.jpg", 'menu.jpg', (text.trim()), fakegif3, fake) */
