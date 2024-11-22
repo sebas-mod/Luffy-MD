@@ -66,7 +66,7 @@ global.fake = {
     forwardedNewsletterMessageInfo: {
       newsletterJid: "120363299030870235@newsletter",
       serverMessageId: 100,
-      newsletterName: '𝑮𝒆𝒏𝒆𝒔𝒊𝒔-𝑰𝑨 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
+      newsletterName: '𝙇𝙪𝙛𝙛𝙮𝘽𝙤𝙩-𝙈𝘿 - 𝑪𝒉𝒂𝒏𝒏𝒆𝒍',
     },
     },
   }
