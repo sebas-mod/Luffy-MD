@@ -20,7 +20,7 @@ const handler = async (m, { text, usedPrefix, command, conn }) => {
 
     let result = await response.json();
 
-    await conn.sendFile(m.chat, "https://pomf2.lain.la/f/9aebngcg.jpg", 'keni.jpg', result.answer, m)
+    await conn.sendFile(m.chat, "https://pomf2.lain.la/f/7lfyrrvo.jpg", 'keni.jpg', result.answer, m)
 
     previousMessages = [...previousMessages, { role: "user", content: text }];
   } catch (error) {
