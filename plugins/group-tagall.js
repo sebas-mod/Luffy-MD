@@ -4,7 +4,7 @@ let handler = async (m, { conn, text, participants, isAdmin, isOwner }) => {
     let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
 
     if (text || m.quoted?.text) {
-        m.reply(`✧ Mensaje : _*${text ? `${text}*_\n` : ''}\n\n\n┌─☠𝐡𝐨𝐥𝐚 𝐧𝐚𝐤𝐚𝐦𝐚𝐬🏴‍☠ \n` + users.map(v => '🌹፝⃟༘┼ ᜴⃕  @' + v.replace(/@.+/, '')).join`\n` + '\n└────', null, {
+        m.reply(`✧ Mensaje : _*${text ? `${text}*_\n` : ''}\n\n\n┌─☠𝐡𝐨𝐥𝐚 𝐧𝐚𝐤𝐚𝐦𝐚𝐬🏴‍☠ \n` + users.map(v => '│➤🌹 @' + v.replace(/@.+/, '')).join`\n` + '\n└────', null, {
             mentions: users
         })
 
