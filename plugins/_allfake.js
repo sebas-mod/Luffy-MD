@@ -10,7 +10,7 @@ let imagenes = ["https://pomf2.lain.la/f/a4ylaghy.jpg",
 "https://pomf2.lain.la/f/s0yfn17g.jpg",
 "https://pomf2.lain.la/f/bp8a1cu8.jpg",
 "https://pomf2.lain.la/f/46pe686.jpg",
-"https://pomf2.lain.la/f/ghfs8sp3.jpg"]
+"https://pomf2.lain.la/f/bp8a1cu8.jpg"]
 
     let icono = imagenes[Math.floor(Math.random() * imagenes.length)]
     let redes = [canal, github, instagram].getRandom()
