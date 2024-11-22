@@ -1,7 +1,7 @@
 {
-    "name": "Waguri-Ai",
-    "version": "8.0.0",
-    "description": "Waguri Ai By KenisawaDev",
+    "name": "LuffyBot-MD",
+    "version": "2.0.0",
+    "description": "Luffy-MD by Sebas-MD",
     "main": "index.js",
     "type": "module",
     "directories": {
