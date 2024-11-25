@@ -1,11 +1,13 @@
-import axios from 'axios';
-import { sticker } from '../lib/sticker.js';
+import fetch from 'node-fetch'
 
-let handler = m => m;
+let handler = m => m
 
-handler.all = async function (m, { conn }) {
+handler.before = async (m) => {
     let chat = global.db.data.chats[m.chat];
-    let prefixRegex = new RegExp('^[' + (opts['prefix'] || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']');
+    if (chat.autogpt && !chat.isBanned) {
+        if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return;
+        if (!m.text) return;
+        
 
     // Si el bot es mencionado o si se responde a un mensaje del bot
     if ((m.mentionedJid.includes(this.user.jid) || (m.quoted && m.quoted.sender === this.user.jid)) && m.isGroup && !chat.isBanned) {
