@@ -1,7 +1,6 @@
 import fetch from 'node-fetch';
 const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems}) => {
   try {
-    const pp = imagen2;
     // let vn = './media/menu.mp3'
     const d = new Date(new Date + 3600000);
     const locale = 'es';
