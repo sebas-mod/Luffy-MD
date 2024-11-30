@@ -56,6 +56,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command }) => {
     'dl': '𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒',
     'tools': '𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒',
      'ai': '𝐀𝐈',
+    'fun': 'games',
     'anonymous': '𝐂𝐇𝐀𝐓 𝐀𝐍𝐎𝐍𝐈𝐌𝐎',
     'confesar': '𝐂𝐎𝐍𝐅𝐄𝐂𝐈𝐎𝐍𝐄𝐒',
     'rpg': '𝐑𝐎𝐋𝐄𝐏𝐋𝐀𝐘',
