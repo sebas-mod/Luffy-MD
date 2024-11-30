@@ -1,40 +1,53 @@
-/*
+import _ from "lodash"
 
-- `PLUGIN SPOTIFY DOWNLOAD`
-- By Kenisawa
+let handler = async (m, { conn, command, usedPrefix, args }) => {
+  const text = _.get(args, "length") ? args.join(" ") : _.get(m, "quoted.text") || _.get(m, "quoted.caption") || _.get(m, "quoted.description") || ""
+  if (typeof text !== 'string' || !text.trim()) return m.reply(`✦ Ingresa una consulta\n*Ejemplo:* .${command} Joji Ew`)
 
-*/
+  await m.reply('✦ Espere un momento...')
+  
+const dps = await fetch(`https://rest.cifumo.biz.id/api/downloader/spotify-dl?url=${text}`)
+  const dp = await dps.json()
 
-import fetch from 'node-fetch'
+  const { title = "No encontrado", type = "No encontrado", artis = "No encontrado", durasi = "No encontrado", download, image } = dp.data
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw m.reply(`Ingresa una consulta\n*✧ Ejemplo:* ${usedPrefix}${command} Joji Ew`);
-conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
-	let ouh = await fetch(`https://api.nyxs.pw/dl/spotify-direct?title=${text}`)
-  let gyh = await ouh.json()
-  m.reply(`_✧ Enviando ${gyh.result.title} - ${gyh.result.artists} (${gyh.result.album})_\n\n> ${gyh.result.urlSpotify}`)
-      const doc = {
-      audio: { url: gyh.result.url },
-      mimetype: 'audio/mp4',
-      fileName: `${gyh.result.title}.mp3`,
-      contextInfo: {
-        externalAdReply: {
-          showAdAttribution: true,
-          mediaType: 2,
-          mediaUrl: gyh.result.urlSpotify,
-          title: gyh.result.title,
-          sourceUrl: gyh.result.urlSpotify,
-          thumbnail: await (await conn.getFile(gyh.result.thumbnail)).data
-        }
+  const captvid = ` *✦Título:* ${title}
+ *✧Duración:* ${durasi}
+ *✦Tipo:* ${type}
+ *✧Artista:* ${artis}
+ *✦link:* ${text}
+ `
+
+  const spthumb = (await conn.getFile(image))?.data
+
+  const infoReply = {
+    contextInfo: {
+      externalAdReply: {
+        body: `✧ En unos momentos se entrega su audio`,
+        mediaType: 1,
+        mediaUrl: text,
+        previewType: 0,
+        renderLargerThumbnail: true,
+        sourceUrl: text,
+        thumbnail: spthumb,
+        title: `S P O T I F Y - A U D I O`
       }
-    };
-    await conn.sendMessage(m.chat, doc, { quoted: m });
-//	await conn.sendFile(m.chat, gyh.result.url, `${gyh.result.title}.mp3`, ``, m)
-	await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }})
+    }
+  }
+
+  await conn.reply(m.chat, captvid, m, infoReply)
+  infoReply.contextInfo.externalAdReply.body = `Audio descargado con éxito`
+  
+    await conn.sendMessage(m.chat, {
+      audio: { url: download },
+      caption: captvid,
+      mimetype: "audio/mpeg",
+      contextInfo: infoReply.contextInfo
+    }, { quoted: m })
 }
-handler.help = ['spotify']
-handler.tags = ['downloader']
-handler.command = /^(spotify|sp)$/i
-handler.premium = false
-handler.register = true
+
+handler.help = ["spotifydl *<link>*"]
+handler.tags = ["downloader"]
+handler.command = /^(spotifydl)$/i
+handler.limit = true
 export default handler
