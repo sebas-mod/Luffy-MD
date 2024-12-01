@@ -17,7 +17,7 @@ m.reply(`*✧ Rutina*\n${muptime}`)
 }
 handler.help = ['rutina']
 handler.tags = ['info']
-handler.command = ['rutina', 'rt']
+handler.command = ['rutine', 'rt']
 
 export default handler
 
