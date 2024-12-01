@@ -1,6 +1,6 @@
 var handler = async (m, { conn, participants, groupMetadata, args, text }) => {
 
-//const pp = './src/12vs12.png'
+let img = 'https://pomf2.lain.la/f/7lfyrrvo.jpg'
 const groupAdmins = participants.filter(p => p.admin)
 const listaAdmins = groupAdmins.map((v, i) => ``).join('\n')
 const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
@@ -44,7 +44,6 @@ ${yo}
 ╰─────────────╯
 𝗩𝗘𝗚𝗘𝗧𝗧𝗔 𝗕𝗢𝗧 
 ❙❘❙❙❘❙❚❙❘❙❙❚❙❘❙❘❙❚❙❘❙❙❚❙❘❙❙❘❙❚❙❘`.trim()
- let img = 'https://pomf2.lain.la/f/7lfyrrvo.jpg'
     await m.react('☠')
     await conn.sendFile(m.chat, img, 'thumbnail.jpg', text.trim(), fakegif3, null, fake)
 
