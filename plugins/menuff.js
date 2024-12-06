@@ -8,10 +8,10 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“ʜᴏʟᴀ %name ꜱᴏʏ ɢᴇɴᴇꜱɪꜱ ʙᴏᴛ, ᴛᴇɴ ᴜɴ ʟɪɴᴅᴏ ᴅɪᴀ"
+  before: `“ʜᴏʟᴀ %name ꜱᴏʏ LuffyBot te presento el menuff"
 
 \ᴄʟɪᴇɴᴛᴇ:\ %name
-\ʙᴏᴛ:\ Génesis Bot
+\ʙᴏᴛ:\ L̈üf̈f̈ÿB̈öẗ-̈M̈D̈
 \ᴍᴏᴅᴏ:\ Público
 \ꜰᴇᴄʜᴀ:\ ${fecha}
 \ᴜꜱᴜᴀʀɪᴏꜱ:\ %totalreg
@@ -23,7 +23,7 @@ const defaultMenu = {
   header: '╭─(❀)❝┊ `%category` ┊❝(❀)',
   body: '┊➧ %cmd\n',
   footer: '╰───────────── –\n',
-  after: > ʙʏ : ᴀɴɢᴇʟ ᴏꜰᴄ ʏ ɢᴇɴᴇꜱɪꜱ ʙᴏᴛ,
+  after: > ʙʏ : Sebas Mod y LuffyBot,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
@@ -186,8 +186,8 @@ await m.react('⛱')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: '𝐆𝐞𝐧𝐞𝐬𝐢𝐬𝐁𝐨𝐭-𝐌𝐃',
-        body: '©𝟐𝟎𝟐𝟒 𝐀𝐧𝐠𝐞𝐥𝐢𝐭𝐨-𝐎𝐅𝐂',
+        title: 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈',
+        body: '𝐒𝐞𝐛𝐚𝐬-𝐌𝐃',
         thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
@@ -200,9 +200,9 @@ await m.react('⛱')
     throw e
   }
 }
-handler.help = ['menudl']
+handler.help = ['menuff']
 handler.tags = ['main']
-handler.command = ['menudl']
+handler.command = ['menuff']
 
 export default handler
 
