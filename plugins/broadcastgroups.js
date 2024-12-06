@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => {
   let teks = text ? text : cc.text
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
   for (let id of groups) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? `${htki} *BROADCAST* ${htka}\n` + teks : `${htki} *BROADCAST* ${htka}\n` + teks + '\n' + readMore + '\n\n' + botdate), true).catch(_ => _)
-  m.reply('Selesai Broadcast All Group :)')
+  m.reply(' 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝙳𝙴 𝙼𝙸 𝙲𝚁𝙴𝙰𝙳𝙾𝚁:)')
 }
 
 handler.help = ['bcgc'].map(v => v + ' <teks>')
