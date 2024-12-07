@@ -8,26 +8,26 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“ʜᴏʟᴀ %name ꜱᴏʏ LuffyBot te presento el menuff"
+  before: `“ʜᴏʟᴀ *%name* ꜱᴏʏ ɢᴇɴᴇꜱɪꜱ ʙᴏᴛ, ᴛᴇɴ ᴜɴ ʟɪɴᴅᴏ ᴅɪᴀ"
 
-\ᴄʟɪᴇɴᴛᴇ:\ %name
-\ʙᴏᴛ:\ L̈üf̈f̈ÿB̈öẗ-̈M̈D̈
-\ᴍᴏᴅᴏ:\ Público
-\ꜰᴇᴄʜᴀ:\ ${fecha}
-\ᴜꜱᴜᴀʀɪᴏꜱ:\ %totalreg
-\ɴɪᴠᴇʟ:\ %level
+\`ᴄʟɪᴇɴᴛᴇ:\` %name
+\`ʙᴏᴛ:\` Génesis Bot
+\`ᴍᴏᴅᴏ:\` Público
+\`ꜰᴇᴄʜᴀ:\` ${fecha}
+\`ᴜꜱᴜᴀʀɪᴏꜱ:\` %totalreg
+\`ɴɪᴠᴇʟ:\` %level
 
 ▬▭▬▭▬▭▬✦✧✦▬▭▬▭▬▭▬
 %readmore
 `.trimStart(),
-  header: '╭─(❀)❝┊ `%category` ┊❝(❀)',
+  header: '╭─(❀)❝┊ *_`%category`_* ┊❝(❀)',
   body: '┊➧ %cmd\n',
   footer: '╰───────────── –\n',
-  after: > ʙʏ : Sebas Mod y LuffyBot,
+  after: `> ʙʏ : ᴀɴɢᴇʟ ᴏꜰᴄ ʏ ɢᴇɴᴇꜱɪꜱ ʙᴏᴛ`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'free': 'menuff',
+'dl': 'ᴍᴇɴᴜ ᴅʟ',
 }
 let img = 'https://i.ibb.co/RjSCKfr/file.jpg'
 
@@ -49,10 +49,10 @@ let img = 'https://i.ibb.co/RjSCKfr/file.jpg'
       // LOGO L P
       let lprem = global.lopr
       let llim = global.lolm
-      let tag = @${m.sender.split('@')[0]}
+      let tag = `@${m.sender.split('@')[0]}`
 
     //-----------TIME---------
-    let ucpn = ${ucapan()}
+    let ucpn = `${ucapan()}`
     let d = new Date(new Date + 3600000)
     let locale = 'es'
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -105,15 +105,15 @@ let img = 'https://i.ibb.co/RjSCKfr/file.jpg'
     let wibs = moment.tz('America/Buenos_Aires').format('ss')
     let wit = moment.tz('Asia/Jayapura').format('HH:mm:ss')
     let wita = moment.tz('Asia/Makassar').format('HH:mm:ss')
-    let wktuwib = ${wibh} H ${wibm} M ${wibs} S
+    let wktuwib = `${wibh} H ${wibm} M ${wibs} S`
 
     let mode = global.opts['self'] ? 'Privado' : 'Publico'
-    let package = JSON.parse(await promises.readFile(join(dirname, '../package.json')).catch( => ({}))) || {}
+    let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { age, exp, limit, level, role, registered, eris} = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
     let premium = global.db.data.users[m.sender].premiumTime
-    let prems = ${premium > 0 ? 'Premium': 'Usuario común'}
+    let prems = `${premium > 0 ? 'Premium': 'Usuario común'}`
     let platform = os.platform()
 
     //---------------------
@@ -142,7 +142,7 @@ let img = 'https://i.ibb.co/RjSCKfr/file.jpg'
     let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : Powered by https://wa.me/${global.conn.user.jid.split@[0]}) + defaultMenu.after
+    let after = conn.menu.after || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + defaultMenu.after
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
@@ -177,17 +177,17 @@ let img = 'https://i.ibb.co/RjSCKfr/file.jpg'
       ucpn,platform, wib, mode, _p, eris, age, tag, name, prems, level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
-    text = text.replace(new RegExp(%(${Object.keys(replace).sort((a, b) => b.length - a.length).join|}), 'g'), (_, name) => '' + replace[name])
+    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
- let fkon = { key: { fromMe: false, participant: ${m.sender.split@[0]}@s.whatsapp.net, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: ${name}, vcard: BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD}}}
-await m.react('⛱') 
+ let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
+await m.react('⛱️') 
 
  conn.sendMessage(m.chat, {
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'L̈üf̈f̈ÿB̈öẗ-̈M̈D̈',
-        body: '𝐒𝐞𝐛𝐚𝐬-𝐌𝐃',
+        title: '𝐆𝐞𝐧𝐞𝐬𝐢𝐬𝐁𝐨𝐭-𝐌𝐃',
+        body: '©𝟐𝟎𝟐𝟒 𝐀𝐧𝐠𝐞𝐥𝐢𝐭𝐨-𝐎𝐅𝐂',
         thumbnailUrl: img,
         sourceUrl: global.canal,
         mediaType: 1,
@@ -200,9 +200,9 @@ await m.react('⛱')
     throw e
   }
 }
-handler.help = ['menuff']
+handler.help = ['menudl']
 handler.tags = ['main']
-handler.command = ['menuff']
+handler.command = ['menudl']
 
 export default handler
 
@@ -228,7 +228,7 @@ function clockStringP(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [ye, ' Años 🗓\n',  mo, ' Meses 🌙\n', d, ' Días ☀\n', h, ' Horad 🕐\n', m, ' Minutos ⏰\n', s, ' Segundos ⏱'].map(v => v.toString().padStart(2, 0)).join('')
+  return [ye, ' *Años 🗓️*\n',  mo, ' *Meses 🌙*\n', d, ' *Días ☀️*\n', h, ' *Horad 🕐*\n', m, ' *Minutos ⏰*\n', s, ' *Segundos ⏱️*'].map(v => v.toString().padStart(2, 0)).join('')
 }
 function ucapan() {
   const time = moment.tz('America/Buenos_Aires').format('HH')
@@ -237,7 +237,7 @@ function ucapan() {
     res = "Madrugada 🌄"
   }
   if (time >= 10) {
-    res = "Mañana ☀"
+    res = "Mañana ☀️"
   }
   if (time >= 15) {
     res = "Tarde 🌇"
