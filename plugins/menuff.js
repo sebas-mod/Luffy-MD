@@ -201,7 +201,7 @@ await m.react('⛱')
   }
 }
 handler.help = ['menuff']
-handler.tags = ['ff']
+handler.tags = ['main']
 handler.command = ['menuff']
 
 export default handler
