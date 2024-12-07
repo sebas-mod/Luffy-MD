@@ -27,7 +27,7 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'dl': 'ᴍᴇɴᴜ ᴅʟ',
+'free': 'ᴍᴇɴᴜ freefire',
 }
 let img = 'https://i.ibb.co/RjSCKfr/file.jpg'
 
@@ -200,9 +200,9 @@ await m.react('⛱️')
     throw e
   }
 }
-handler.help = ['menudl']
+handler.help = ['menuff']
 handler.tags = ['main']
-handler.command = ['menudl']
+handler.command = ['menuff']
 
 export default handler
 
